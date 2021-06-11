@@ -1,0 +1,166 @@
+/*============================================================================
+	#COMMON
+==============================================================================*/
+
+
+// .site {
+// 	position: relative;
+// 	// max-width: 1920px;
+// 	margin: 0 auto;
+// 	// overflow: hidden;
+// }
+
+
+.site, .container {
+
+	max-width: 1452px;
+	padding: 0 16px;
+	margin: 0 auto;
+}
+
+.page-content {
+
+	display: flex;
+	flex-wrap: wrap;
+
+	&__main {
+
+		flex: 0 0 65.5%;
+		max-width: 65.5%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__aside {
+
+		flex: 0 0 calc(34.5% - 50px);
+		max-width: calc(34.5% - 50px);
+		margin-left: 50px;
+	}
+}
+
+.section {
+
+	margin: 0 0 48px 0;
+
+	&__header {
+		
+		margin-bottom: 32px;
+	}
+
+	&__header--morelink {
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__title {
+
+		margin: 0 0 0 0;
+	}
+}
+
+.main-grid {
+
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -18px;
+
+	&__col {
+
+		flex: 0 0 calc(100% / 3 - 36px );
+		max-width: calc(100% / 3 - 36px );
+		margin: 18px 18px;
+
+	}
+}
+
+.background-gradients {
+
+	&__item {
+
+		border-radius: 100%;
+		position: fixed;
+		top: 0;
+		z-index: -1;
+		border-radius: 100%;
+		// border: 1px solid white;
+		filter: blur(90px);
+
+	}
+
+	&__item--big {
+		left: 0;
+		top: 140px;
+		left: 50%;
+    	transform: translateX(-100%);
+		width: 820px;
+		height: 820px;
+		background: linear-gradient(180deg, rgba(116, 92, 196, 0.8) 0%, rgba(4, 165, 255, 0.8) 100%);
+	}
+
+	&__item--small {
+
+		top: 90px;
+		right: 50%;
+		width: 704px;
+		height: 704px;
+		background: linear-gradient(180deg, rgba(227, 25, 98, 0.8) 0%, rgba(69, 4, 255, 0.8) 100%);
+		transform: translateX(120%) rotate(75deg) ;
+	}
+}
+
+.widget {
+
+	margin-bottom: 30px;
+}
+
+.stars-list {
+
+	display: flex;
+
+	.icon {
+
+		margin-right: 3px;
+
+		&:last-child {
+
+			margin-right: 0;
+		}
+	}
+}
+
+.swiper-container .swiper-pagination {
+
+	bottom: 32px;
+}
+
+.swiper-pagination-bullet {
+
+	width: 10px;
+	height: 10px;
+	background: $colorBlue;
+	opacity: .5;
+}
+
+.swiper-pagination-bullet-active {
+
+	opacity: 1;
+}
+
+.swiper-lazy-preloader {
+
+	border-color: $colorBody;
+	border-top-color: transparent;
+}
+
+.swiper-pagination-fraction {
+
+	width: auto;
+}
+
+.lazy-background {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQYV2P4//vHfwAJ4QPym4ubMgAAAABJRU5ErkJggg==) !important;
+    background-repeat: repeat !important;
+}

@@ -1,0 +1,475 @@
+/*============================================================================
+	#Card & Section Cards
+==============================================================================*/
+
+.section-cards {
+
+	margin-bottom: 80px;
+
+	.section__header {
+
+		margin-bottom: 48px;
+	}
+
+	.section__body {
+
+		margin-bottom: 48px;
+	}
+
+	.section__footer{
+
+		display: flex;
+		justify-content: center;
+	}
+
+}
+
+.casino-grid {
+
+	&__col {
+
+		margin-bottom: 24px;
+	}
+
+	&__col:first-child {
+
+		position: relative;
+		z-index: 10;
+	}
+}
+
+.card {
+
+	background: #161039;
+	border-radius: 6px;
+	transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+	position: relative;
+	// overflow: hidden;
+
+	&::before,
+	&::after {
+
+		content: '';
+		position: absolute;
+		height: 100%;
+		width: 20%;
+		top: 0;
+		left: 33%;
+		background: rgba(4, 165, 255, 0.1);
+		transform: skewX(-38deg);
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	&::before {
+		transform: translateX(-150px) skewX(-38deg);
+		transition: 1s all cubic-bezier(0.165, 0.84, 0.44, 1);
+	}
+
+	&::after {
+
+		left: 58%;
+		width: 4%;
+		transform: translateX(-150px) skewX(-38deg);
+		transition: 1s all cubic-bezier(0.165, 0.84, 0.44, 1);
+	}
+
+	&:hover {
+
+		background: #1C1448;
+		box-shadow: inset 0 0 0 1px #04A5FF, 0px 2px 25px rgba(4, 165, 255, 0.25);
+
+		&::before {
+
+			opacity: 1;
+			transform: translateX(0) skewX(-38deg);
+
+		}
+
+		&::after {
+
+			opacity: 1;
+			transform: translateX(0) skewX(-38deg);
+			transition: 1s all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
+		}
+	}
+
+	&__inner {
+
+		display: flex;
+		padding: 13px 0;
+
+	}
+
+	&__col {
+
+		border-right: 2px solid #2C3057;
+		flex: 0 0 auto;
+		
+		&:last-child {
+
+			border: none;
+		}
+	}
+
+	&__col--left {
+
+		padding: 0 14px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__col--main {
+
+		flex: 1 0 55%;
+		max-width: 55%;
+		padding: 9px 24px 14px;
+
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: flex-start;
+		height: 100%;
+	}
+
+	&__col--right {
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		flex: 1 0 auto;
+
+		.button-primary {
+
+			margin: 10px 0;
+			min-width: 184px;
+			padding-left: 16px;
+			padding-right: 16px;
+		}
+	}
+
+	&__image {
+
+		margin-bottom: 14px;
+	}
+
+	&__title {
+
+		font-weight: $bold;
+		text-transform: uppercase;
+		margin-bottom: 18px;
+	}
+
+	&__progress-bar {
+
+		margin-bottom: 20px;
+		flex: 0 0 100%;
+	}
+
+	&__amount {
+
+		max-width: 224px;
+		margin-bottom: 20px;
+	}
+
+	&__games {
+
+		max-width: 320px;
+		margin-bottom: 24px;
+	}
+}
+
+.progress-bar {
+
+	&__header {
+
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 2px;
+	}
+
+	&__title,
+	&__number {
+
+		font-size: 14px;
+
+	}
+
+	&__progress {
+
+		height: 5px;
+		width: 100%;
+		background: #c4c4c4;
+		border-radius: 10px;
+		overflow: hidden;
+	}
+
+	&__current-progress {
+
+		width: auto;
+		height: 100%;
+		background: $colorBlue;
+		display: block;
+		border-radius: 10px;
+		transition: all .8s cubic-bezier(0.075, 0.82, 0.165, 1);
+	}
+}
+
+.props-slider {
+
+	&__title {
+
+		font-size: 14px;
+		margin-bottom: 2px;
+	}
+
+	&__body {
+
+		display: flex;
+		align-items: center;
+	}
+
+	.swiper-container {
+
+		margin: 0;
+		position: relative;
+	}
+
+	.swiper-slide {
+		
+		display: flex;
+	}
+
+	.swiper-navigation {
+
+		display: flex;
+		align-items: center;
+		margin-left: 4px;
+	}
+
+	.button-nav {
+
+		// position: absolute;
+		right: 0;
+		box-sizing: border-box;
+	}
+}
+
+.props-block {
+
+	&__title {
+
+		font-size: 14px;
+		margin-bottom: 2px;
+	}
+
+	&__item-list {
+
+		display: flex;
+
+	}
+
+	&__item {
+
+		line-height: 1;
+		font-size: 14px;
+		font-weight: $medium;
+		text-align: center;
+		position: relative;
+		padding: 5px 10px 1px;
+		border-right: 2px solid #2C3057;
+		flex: 1 1 auto;
+
+		&:first-child {
+
+			padding-left: 0;
+			text-align: left;
+		}
+
+		&:last-child {
+			padding-right: 0;
+			text-align: right;
+			border-right: none;
+		}
+	}
+}
+
+.slider-currency {
+
+	max-width: 216px;
+}
+
+.slider-items {
+
+	.swiper-slide {
+
+		width: auto;
+	}
+
+	&__item {
+
+		line-height: 1;
+		font-size: 14px;
+		padding: 5px 0 1px;
+		font-weight: $medium;
+		text-align: center;
+		width: 100%;
+		position: relative;
+		padding-right: 10px;
+
+		&:before {
+
+			content: '';
+			position: absolute;
+			height: 100%;
+			width: 2px;
+			background: #2C3057;
+			top: 0;
+			right: 0;
+		}
+	}
+
+	&--amount {
+
+		.props-slider__title {
+
+			margin-bottom: -2px;
+		}
+	}
+
+	&--games {
+
+		.props-slider__title {
+
+			margin-bottom: 0px;
+		}
+
+		.slider-items__item {
+
+			padding-right: 14px;
+		}
+	}
+ 
+}
+
+.card-bonus {
+
+	&__main {
+
+		display: flex;
+		position: relative;
+	}
+
+	.icon {
+
+		width: 20px;
+		height: 20px;
+		margin-right: 10px;
+		fill: $colorSky;
+	} 
+
+	&__title {
+
+		font-size: 16px;
+		font-weight: $light;
+		color: $colorSky;
+		display: flex;
+		align-items: center;
+		// padding-top: 2px;
+		margin-right: 10px;
+
+		span {
+
+			margin-left: 6px;
+			font-weight: $medium;
+		}
+	}
+
+	&__show-more {
+
+		width: 18px;
+		height: 18px;
+		padding-top: 2px;
+		background: #2C3057;
+		border-radius: 50%;
+		font-size: 12px;
+		color: #9597AB;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&.active {
+
+			background: $colorSky;
+			color: white;
+		}
+	}
+
+	&__more-block {
+
+		position: absolute;
+		z-index: 2;
+		background: white;
+		color: #4F4F4F;
+		width: 350px;
+		border-radius: 8px;
+		border-top-left-radius: 0;
+		top: 55px;
+		right: -340px;
+		// display: none;
+		transform: translateY(10px);
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+		&.active {
+
+			transform: translateY(0px);
+			opacity: 1;
+			visibility: visible;
+		}
+
+
+		&::before {
+
+			content: '';
+			position: absolute;
+			top: -33px;
+			left: 0;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 34px 0 0 46px;
+			border-color: transparent transparent transparent white;
+		}
+	}
+
+	&__item-list {
+
+		margin: 12px 16px;
+	}
+
+	&__item {
+
+		padding-left: 16px;
+		position: relative;
+		font-size: 14px;
+		line-height: 120%;
+		margin-bottom: 5px;
+
+		&::before {
+
+			content: '';
+			position: absolute;
+			top: 2px;
+			left: 0;
+			width: 10px;
+			height: 10px;
+			background: url('../icons/arrow-next--blue.svg') no-repeat;
+			background-size: contain;
+		}
+	}
+}

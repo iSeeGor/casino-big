@@ -1,0 +1,164 @@
+/*============================================================================
+	#Footer
+==============================================================================*/
+.footer {
+
+	padding-top: 80px;
+	padding-bottom: 56px;
+	border-top: 3px solid #2C3057;
+	background: linear-gradient(180deg, #070326 8.54%, #3246FF 100%);
+
+	&__widgets,
+	&__banners,
+	&__info {
+
+		margin-bottom: 70px;
+	}
+}
+
+.footer-widgets {
+
+	padding-bottom: 24px;
+	overflow: hidden;
+
+	&__row {
+
+		margin: 0 -25px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__col {
+
+		margin: 0 25px;
+	}
+
+	&__col-2 {
+
+		flex: 0 0 calc(100% / 6 - 50px);
+		max-width: calc(100% / 6 - 50px);
+	}
+
+	&__col-3 {
+
+		flex: 0 0 calc(100% / 4 - 50px);
+		max-width: calc(100% / 4 - 50px);
+	} 
+
+	&__col-4 {
+
+		flex: 0 0 calc(100% / 3 - 50px);
+		max-width: calc(100% / 3 - 50px);
+	}
+
+	// &__col-5 {
+
+	// 	flex: 0 0 calc(100% / 5 - 50px);
+	// 	max-width: calc(100% / 5 - 50px);
+	// }
+}
+
+.widget-footer {
+
+	&__title {
+
+		font-size: 24px;
+		margin: 0 0 24px 0;
+	}
+}
+
+.widget-nav {
+
+
+	&__list {
+
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+	}
+
+	ul li {
+
+		margin-bottom: 12px;
+
+		&:last-child {
+
+			margin-bottom: 0;
+		}
+	}
+
+	ul li a {
+
+		font-size: 14px;
+		line-height: 130%;
+		color: white;
+		text-decoration: none;
+		display: flex;
+		transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+		
+		&:hover {
+
+			color: $colorSky;
+		}
+
+		svg {
+
+			flex: 0 0 21px;
+			width: 21px;
+			height: 21px;
+			fill: $colorSky;
+			margin-right: 10px;
+			margin-top: -3px;
+		}
+	}
+}
+
+.footer-banners {
+
+	padding-bottom: 24px;
+
+	&__title {
+
+		font-size: 24px;
+		margin: 0 0 32px 0;
+	}
+
+	&__item-list {
+
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.footer-info {
+
+	&__inner {
+
+		display: flex;
+	}
+
+	&__logo {
+
+		flex: 0 0 auto;
+		margin-right: 80px;
+	}
+
+	&__text {
+
+		font-size: 14px;
+		font-weight: $light;
+		line-height: 120%;
+		opacity: .7;
+	}
+
+}
+
+.footer-bottom {
+
+	&__social {
+
+		display: flex;
+		justify-content: center;
+		padding: 4px 0;
+	}
+}

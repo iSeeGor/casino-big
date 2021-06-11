@@ -1,0 +1,53 @@
+/*============================================================================
+	#Fonts
+==============================================================================*/
+
+// Light
+@font-face {
+    font-family: 'Muller';
+    src: url('../fonts/MullerLight.woff2') format('woff2'),
+        url('../fonts/MullerLight.woff') format('woff');
+    font-weight: $light;
+    font-style: normal;
+    font-display: swap;
+}
+
+// Medium
+@font-face {
+    font-family: 'Muller';
+    src: url('../fonts/MullerMedium.woff2') format('woff2'),
+        url('../fonts/MullerMedium.woff') format('woff');
+    font-weight: $medium;
+    font-style: normal;
+    font-display: swap;
+}
+
+// Regular
+@font-face {
+    font-family: 'Muller';
+    src: url('../fonts/MullerRegular.woff2') format('woff2'),
+        url('../fonts/MullerRegular.woff') format('woff');
+    font-weight: $regular;
+    font-style: normal;
+    font-display: swap;
+}
+
+// Bold
+@font-face {
+    font-family: 'Muller';
+    src: url('../fonts/MullerBold.woff2') format('woff2'),
+        url('../fonts/MullerBold.woff') format('woff');
+    font-weight: $bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+// ExtraBold
+@font-face {
+    font-family: 'Muller';
+    src: url('../fonts/MullerExtraBold.woff2') format('woff2'),
+        url('../fonts/MullerExtraBold.woff') format('woff');
+    font-weight: $extraBold;
+    font-style: normal;
+    font-display: swap;
+}

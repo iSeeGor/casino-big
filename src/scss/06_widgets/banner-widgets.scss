@@ -1,0 +1,94 @@
+/*============================================================================
+	#Banner Widgets
+==============================================================================*/
+
+.widget-banner {
+
+	position: relative;
+	border-radius: 15px;
+	overflow: hidden;
+	width: 100%;
+	height: 544px;
+
+	&:hover {
+
+		&::before {
+
+			opacity: 1;
+		}
+
+			.button-primary {
+
+			opacity: 1;
+			visibility: visible;
+			transform: translateY(0);
+		}
+	}
+
+	&::before {
+
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.94) 70.31%, #000000 100%);
+		z-index: 1;
+		opacity: 0;
+		transition:all .8s cubic-bezier(0.165, 0.84, 0.44, 1);
+	}
+
+	&__inner {
+
+		padding: 24px 24px 80px;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+	}
+
+	&__title {
+
+		position: relative;
+		z-index: 2;
+		align-self: flex-start;
+		margin: 0 0 0 0;
+	}
+
+	img {
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
+
+	.button-primary {
+
+		position: absolute;
+		visibility: hidden;
+		transform: translateY(20px);
+		opacity: 0;
+		z-index: 2;
+		transition:all .8s cubic-bezier(0.165, 0.84, 0.44, 1);
+	}
+}
+
+.widget-banner--big {
+
+	height: 650px;
+	border-radius: 5px;
+
+	.widget-banner__inner {
+
+		padding-bottom: 96px;
+	}
+
+	&::before {
+
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+	}
+}

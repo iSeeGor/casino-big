@@ -1,0 +1,35 @@
+/*============================================================================
+	#Rating
+==============================================================================*/
+
+.rating {
+
+	&__title {
+
+		font-size: 12px;
+		line-height: 12px;
+		margin-bottom: 6px;
+		font-weight: $light;
+		color: white;
+		opacity: .7;
+	}
+
+	&__body {
+
+		display: flex;
+		justify-content: center;
+	}
+
+	&__stars {
+
+		margin-right: 6px;
+		margin-top: 1px;
+	}
+
+	&__nubmer {
+
+		font-size: 14px;
+		font-weight: $medium;
+	}
+	
+}

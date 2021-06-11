@@ -1,0 +1,39 @@
+/*============================================================================
+	#Header
+==============================================================================*/
+
+.header {
+
+	padding: 32px 0 40px;
+	position: relative;
+	z-index: 100;
+
+	&__inner {
+
+		display: flex;
+		flex-wrap: nowrap;
+	}
+
+	&__nav {
+
+		margin: 0 auto;
+	}
+
+	&__authorization {
+
+		.button-primary:first-child {
+
+			margin-right: 24px;
+		}
+	}
+
+	&__controll {
+
+		display: flex;
+	}
+
+	.button-search {
+
+		margin: 0 32px;
+	}
+}

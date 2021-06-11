@@ -1,0 +1,101 @@
+/*============================================================================
+	#FORM
+==============================================================================*/
+
+.form {
+
+	&__row {
+
+		margin-bottom: 24px;
+
+		&:last-child {
+
+			margin-bottom: 0;
+		}
+	}
+
+	&__group {
+
+		
+	}
+
+	&__label {
+
+		font-family: $fontPrimary;
+		color: $colorBase;
+		opacity: .5;
+		font-size: 16px;
+		font-weight: $regular;
+		line-height: 1.375;
+		margin-bottom: 12px;
+	} 
+
+	&__input {
+		font-family: $fontPrimary;
+		color: $colorBase;
+		font-size: 16px;
+		font-weight: $regular;
+		line-height: 1.375;
+		padding: 11px 16px;
+		border: 1px solid #D4D9E0;
+		border-radius: 16px;
+		width: 100%;
+		background: transparent;
+		transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+		&::placeholder {
+			transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+			color: #8D9AAE;
+		}
+
+		&:focus::placeholder {
+
+			opacity: 0;
+		}
+
+		&:focus {
+
+			border-color: $colorBase;
+		}
+
+		&:valid {
+
+			// border-color: $colorBase;
+		}
+	}
+
+	&__textarea {
+
+
+
+		&::placeholder {
+
+
+		}
+
+		&:focus::placeholder {
+
+			opacity: 0;
+		}
+	}
+
+	&__submit {
+
+		width: 100%;
+		min-width: 100%;
+	}
+
+}
+
+.form {
+
+	em.error {
+
+		color: red;
+		font-size: 12px;
+		display: block;
+		line-height: 18px;
+		margin-top: 4px;
+	}
+}
+

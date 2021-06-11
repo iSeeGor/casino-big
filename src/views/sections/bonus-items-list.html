@@ -1,0 +1,17 @@
+<section class="section section-bonus-cards">
+	<header class="section__header">
+		<h2 class="section__title">
+			Лучшие бонусы онлайн казино
+		</h2>
+	</header>
+
+	<div class="section__body">
+		<div class="main-grid">
+			@@for (var i = 0; i < 9; i++) {
+				<div class="main-grid__col">
+					@@include('../components/bonus-item.html')
+				</div>
+			}
+		</div>
+	</div>
+</section>

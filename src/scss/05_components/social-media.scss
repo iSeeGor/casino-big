@@ -1,0 +1,40 @@
+/*============================================================================
+	#Social Media
+==============================================================================*/
+.socialmedia {
+
+	&__inner {
+
+		display: flex;
+	}
+
+	&__button {
+
+		margin: 0 10px;
+	}
+}
+
+.social-button {
+
+	background: rgba(255, 255, 255, 0.3);
+	height: 36px;
+	width: 36px;
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+	&:hover {
+
+		background: $colorSky;
+		box-shadow: 0px 0px 15px rgba(4, 165, 255, .8);
+	}
+	
+	&__icon {
+
+		width: 20px;
+		height: 20px;
+		fill: white;
+	}
+}
