@@ -1,0 +1,29 @@
+	<section class="section section-faq">
+
+		<header class="section-faq__header">
+			<h2 class="section-faq__title">Часто задаваемые вопросы</h2>
+		</header>
+		<div class="section-faq__body">
+			<div class="accordion">
+				@@ for(var i = 0; i < 6; i++){
+				<div class="accordion__item" itemprop="mainEntity" itemscope="" itemtype="http://schema.org/Question">
+					<header class="accordion__header">
+						<div class="accordion__title" itemprop="name">
+						<img draggable="false" role="img" class="emoji" alt="💡" src="https://s.w.org/images/core/emoji/13.0.1/svg/1f4a1.svg">
+						Lorem, ipsum dolor.</div>
+						<div class="accordion__button">
+							<svg class="icon">
+								<use xlink:href="symbol/sprite.svg#arrow-angel-next"></use>
+							</svg>
+						</div>
+					</header>
+					<div class="accordion__body" itemprop="acceptedAnswer" itemscope="" itemtype="http://schema.org/Answer">
+						<div class="accordion__message" itemprop="text">
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit minus distinctio nisi earum ipsam, facilis magni expedita enim esse, illo ducimus eius sequi ad aliquid deserunt. Voluptatum voluptatem similique veniam.
+						</div>
+					</div>
+				</div>
+				}
+			</div>
+		</div>
+	</section>

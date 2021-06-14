@@ -2,11 +2,13 @@ jQuery(document).ready(function($){
 
 	//common
 	languageSwitcher($);
+	backgroundGradientsHandler($);
 
 	// components
 	bannerSlider($);
 	currencySlider($);
 	cardBonusDropdown($);
+	accordionFAQ();
 
 	// close outside 
 	document.addEventListener("click", function(event) {
@@ -38,6 +40,51 @@ const languageSwitcher = ($) => {
 		$(this).parents('.js-lang-switch').find('.language__header').html(target);
 		$(this).html(current);
 	});
+}
+
+const backgroundGradientsHandler = ($) => {
+	
+
+	$(window).on('scroll', function(){
+		
+		let typographyTopOffset = $('.section-typography').offset().top;
+
+		if( $(window).scrollTop() >= typographyTopOffset - $(window).innerHeight()) {
+
+			// $('.background-gradients__item').css({
+
+			// 	'position' : 'absolute',
+			// 	'top' : typographyTopOffset - 1200 + 'px',
+			// });
+
+			$('.background-gradients__item--big').css({
+				'position' : 'absolute',
+				'top' : $('.background-gradients__item--big').offset().top + 'px',
+
+			});
+
+			$('.background-gradients__item--small').css({
+				'position' : 'absolute',
+				'top' : Math.floor($('.background-gradients__item--small').offset().top) + 'px',
+
+			});
+		
+		} else {
+
+			$('.background-gradients__item--big').css({
+				'position' : 'fixed',
+				'top' : '140px',
+
+			});
+
+			$('.background-gradients__item--small').css({
+				'position' : 'fixed',
+				'top' : '90px',
+
+			});
+
+		}
+	}).scroll();
 }
 
 const bannerSlider = ($) => {
@@ -129,5 +176,14 @@ const cardBonusDropdown = ($) => {
 		$(this).toggleClass('active');
 		$(this).next().toggleClass('active');
 
+	});
+}
+
+const accordionFAQ = () => {
+
+	$('.accordion__header').on('click', function(){
+		
+		$(this).toggleClass('_active');
+		$(this).siblings('.accordion__body').slideToggle(400);
 	});
 }

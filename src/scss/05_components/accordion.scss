@@ -1,0 +1,146 @@
+/*============================================================================
+	#Accordion
+==============================================================================*/
+
+.accordion {
+
+	&__item {
+	
+		background: #2C3057;
+		border-radius: 5px;
+		overflow: hidden;
+		margin-bottom: 15px;
+		padding: 10px 16px 10px 16px;
+
+		&:last-child {
+
+			margin-bottom: 0;
+		}
+	}
+
+	&__header {
+
+		padding: 2px 0;
+		position: relative;
+		cursor: pointer;
+		z-index: 1;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+
+		&._active {
+
+			.accordion__button {
+			
+				.icon {
+
+					transform: rotate(-90deg);
+				}
+			}
+		}
+
+		&:hover {
+
+			.accordion__title {
+
+				color: $colorSky;
+			}
+			.accordion__button .icon {
+
+				fill: $colorSky;
+			}
+		}
+	}
+
+	&__title {
+
+		font-size: 18px;
+		line-height: 140%;
+		font-weight: $medium;
+		transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+	}
+
+	&__button {
+		
+		display: block;
+		width: 24px;
+		height: 24px;
+		padding: 4px;
+		margin-right: 4px;
+
+		
+		.icon {
+
+			width: 16px;
+			height: 16px;
+			fill: white;
+			fill: $colorSky;
+			transform: rotate(90deg);
+			transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+		}
+	}
+
+	&__body {
+
+		display: none;
+		border-top: 1px solid rgba(255, 255, 255, 0.705);
+		padding: 10px 0 0px;
+    	margin-top: 8px;
+	}
+
+	&__message {
+
+		font-size: 18px;
+		line-height: 140%;
+		font-weight: $light;
+
+		p {
+			margin: 0 0 20px 0;
+		}
+
+		*:last-child {
+
+			margin-bottom: 0;
+		}
+	}
+	
+}
+
+
+@include _395 {
+
+	.accordion {
+
+		&__header {
+
+			padding: 11px 50px 12px 20px;
+		}
+
+		&__title {
+
+			font-size: 15px;
+			line-height: 1.5;
+		}
+
+		&__button {
+
+			right: 18px;
+			height: 26px;
+			width: 26px;
+
+			&::before,
+			&::after {
+
+				width: 10px;
+				height: 1px;
+			}
+		}
+
+		&__body {
+
+			padding: 11px 20px 12px;
+		}
+	}
+}

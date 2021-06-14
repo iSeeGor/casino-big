@@ -42,6 +42,10 @@
 .section {
 
 	margin: 0 0 48px 0;
+	&:last-of-type {
+
+		margin-bottom: 24px;
+	}
 
 	&__header {
 		
@@ -106,8 +110,8 @@
 		right: 50%;
 		width: 704px;
 		height: 704px;
-		background: linear-gradient(180deg, rgba(227, 25, 98, 0.8) 0%, rgba(69, 4, 255, 0.8) 100%);
-		transform: translateX(120%) rotate(75deg) ;
+		background: linear-gradient(255deg, rgba(227, 25, 98, 0.8) 0%, rgba(69, 4, 255, 0.8) 100%);
+		transform: translateX(120%);
 	}
 }
 
@@ -163,4 +167,16 @@
 .lazy-background {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQYV2P4//vHfwAJ4QPym4ubMgAAAABJRU5ErkJggg==) !important;
     background-repeat: repeat !important;
+}
+
+img.wp-smiley, img.emoji {
+    display: inline !important;
+    border: none !important;
+    box-shadow: none !important;
+    height: 1em !important;
+    width: 1em !important;
+    margin: 0 .07em !important;
+    vertical-align: -0.1em !important;
+    background: none !important;
+    padding: 0 !important;
 }
