@@ -47,6 +47,7 @@
 	background-position: center;
 	position: relative;
 	z-index: 1;
+	background-color: #070326;
 
 	&::before {
 
@@ -191,6 +192,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 	}
 
 	&__title {
@@ -200,6 +202,15 @@
 		margin-bottom: 4px;
 		font-size: 18px;
 		line-height: 1;
+	}
+
+	&:hover {
+
+		.stiker__image {
+
+			box-shadow:0 0 0 1px $colorBlue, 0px 2px 25px rgba(4, 165, 255, 0.25);
+			opacity: .9;
+		}
 	}
 }
 
@@ -274,6 +285,8 @@
 	
 	position: relative;
 	margin-bottom: 46px;
+	transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+	border-radius: 5px;
 	
 	&:last-child {
 
@@ -357,5 +370,11 @@
 		transform: translate(-50%, 50%);
 		padding: 13px 24px 11px;
 		min-height: 42px;
+	}
+
+	&:hover {
+
+		box-shadow: 0 0 0 1px $colorBlue;
+		filter: drop-shadow(0px 2px 25px rgba(4, 165, 255, 0.25));
 	}
 }

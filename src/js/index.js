@@ -13,12 +13,12 @@ jQuery(document).ready(function($){
 	// close outside 
 	document.addEventListener("click", function(event) {
 		if (event.target.closest(".js-lang-switch")) return;
-		if (event.target.closest(".js-card-bonus")) return;
-		if (event.target.closest(".card-bonus__more-block")) return;
+		// if (event.target.closest(".js-card-bonus")) return;
+		// if (event.target.closest(".card-bonus__more-block")) return;
 
 		$('.js-lang-switch').removeClass('active').find('.language__dropdown').slideUp(200);
-		$('.card-bonus__more-block').removeClass('active');
-		$('.js-card-bonus').removeClass('active');
+		// $('.card-bonus__more-block').removeClass('active');
+		// $('.js-card-bonus').removeClass('active');
 	});
 
 });
@@ -50,12 +50,6 @@ const backgroundGradientsHandler = ($) => {
 		let typographyTopOffset = $('.section-typography').offset().top;
 
 		if( $(window).scrollTop() >= typographyTopOffset - $(window).innerHeight()) {
-
-			// $('.background-gradients__item').css({
-
-			// 	'position' : 'absolute',
-			// 	'top' : typographyTopOffset - 1200 + 'px',
-			// });
 
 			$('.background-gradients__item--big').css({
 				'position' : 'absolute',
@@ -108,74 +102,170 @@ const bannerSlider = ($) => {
 
 const currencySlider = ($) => {
 
-	let currencySliders =  document.querySelectorAll('.slider-currency');
-	if(currencySliders.length) {
+	flagsSlider();
+	depositSlider();
+	gamesSlider();
 
-		currencySliders.forEach((element) => {
-			swiperInit(element, 6, 6);
+	function flagsSlider (){
+
+		let flagsSiders =  document.querySelectorAll('.slider-currency');
+		if(!flagsSiders.length) return;
+
+		flagsSiders.forEach(el => {
+
+			if(el.querySelectorAll('.swiper-slide').length <= 5) {
+
+				el.classList.add('no-slider'); 
+				return;
+			} 
+
+			let slider = el.querySelector('.swiper-container');
+			let next = el.querySelector('.button-nav--next');
+			let prev = el.querySelector('.button-nav--prev');
+
+			let swiper = new Swiper(slider, {
+
+				slidesPerView : 6,
+				loop: true,
+				speed : 1000,
+				spaceBetween : 6,
+
+				// autoplay: {
+
+					// delay: autoplayDelay,
+					// disableOnInteraction : false
+				// },
+
+				navigation: {
+					nextEl: next,
+					prevEl: prev,
+				},
+			});
 		});
-	}
+	};
 
-	let amountSliders =  document.querySelectorAll('.slider-items--amount');
-	if(amountSliders.length) {
+	function depositSlider (){
 
-		amountSliders.forEach((element) => {
-			swiperInit(element, 'auto', 10);
+		let flagsSiders =  document.querySelectorAll('.slider-items--amount');
+		if(!flagsSiders.length) return;
+
+		flagsSiders.forEach(el => {
+
+			if(el.querySelectorAll('.swiper-slide').length <= 2) {
+
+				el.classList.add('no-slider'); 
+				return;
+			} 
+
+			let slider = el.querySelector('.swiper-container');
+			let next = el.querySelector('.button-nav--next');
+			let prev = el.querySelector('.button-nav--prev');
+
+			let swiper = new Swiper(slider, {
+
+				slidesPerView : 'auto',
+				loop: true,
+				speed : 1000,
+				spaceBetween : 0,
+
+				// autoplay: {
+
+					// delay: autoplayDelay,
+					// disableOnInteraction : false
+				// },
+
+				navigation: {
+					nextEl: next,
+					prevEl: prev,
+				},
+			});
 		});
-	}
+	};
 
-	let gamesSliders =  document.querySelectorAll('.slider-items--games');
-	if(gamesSliders.length) {
+	function gamesSlider (){
 
-		gamesSliders.forEach((element) => {
-			swiperInit(element, 'auto', 14);
+		let flagsSiders =  document.querySelectorAll('.slider-items--games');
+		if(!flagsSiders.length) return;
+
+		flagsSiders.forEach(el => {
+
+			if(el.querySelectorAll('.swiper-slide').length <= 4) {
+
+				el.classList.add('no-slider'); 
+				return;
+			} 
+
+			let slider = el.querySelector('.swiper-container');
+			let next = el.querySelector('.button-nav--next');
+			let prev = el.querySelector('.button-nav--prev');
+
+			let swiper = new Swiper(slider, {
+
+				slidesPerView : 'auto',
+				loop: true,
+				speed : 1000,
+				spaceBetween : 0,
+
+				// autoplay: {
+
+					// delay: autoplayDelay,
+					// disableOnInteraction : false
+				// },
+
+				navigation: {
+					nextEl: next,
+					prevEl: prev,
+				},
+			});
 		});
-	}
+	};
 
-	function swiperInit(element, slidesPerView, spaceBetween){
+	// Start/Stop Autoplay On MouseEnter/Leave
+	$('.js-casino-card').hover(function(){
 
-		let slider = element.querySelector('.swiper-container');
-		let next = element.querySelector('.button-nav--next');
-		let prev = element.querySelector('.button-nav--prev');
+		let sliders = $(this).find('.swiper-container');
+		sliders.each(function(){
 
-		let autoplayDelay = Math.floor(Math.random() * 10) * 100;
-
-		let swiper = new Swiper(slider, {
-
-			slidesPerView : slidesPerView,
-			loop: true,
-			speed : 1000,
-			spaceBetween : spaceBetween,
-
-			// autoplay: {
-
-				// delay: autoplayDelay,
-				// disableOnInteraction : false
-			// },
-
-			navigation: {
-				nextEl: next,
-				prevEl: prev,
-			},
+			$(this)[0].swiper.autoplay.start()
 		});
 
-		$(element).mouseenter(function(){
-			swiper.autoplay.stop();
-		});
+	}, function(){
 
-		$(element).mouseleave(function(){
-			swiper.autoplay.start();
+		let sliders = $(this).find('.swiper-container');
+		sliders.each(function(){
+
+			$(this)[0].swiper.autoplay.stop()
 		});
-	}
+	});
+
 }
 
 const cardBonusDropdown = ($) => {
 
-	$('.js-card-bonus').on('click', function(){
+	$('.js-card-bonus').on('mouseenter', function(){
 
-		$(this).toggleClass('active');
-		$(this).next().toggleClass('active');
+		$(this).addClass('active');
+		$(this).next().addClass('active');
 
+	});
+
+	$('.js-card-bonus').on('mouseleave', function(){
+
+		$(this).removeClass('active');
+		$(this).next().removeClass('active');
+
+	});
+
+	$('.js-card-more-block').on('mouseenter', function(){
+
+		$(this).addClass('active');
+		$(this).prev().addClass('active');
+	});
+
+	$('.js-card-more-block').on('mouseleave', function(){
+
+		$(this).removeClass('active');
+		$(this).prev().removeClass('active');
 	});
 }
 
