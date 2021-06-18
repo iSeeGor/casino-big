@@ -9,6 +9,6 @@ module.exports = function() {
             ['src/images/**/*.{png,jpg,gif,svg}'],
             $.gulp.series('images:dev')
         );
-        $.gulp.watch(['src/views/**/*.html', 'src/index.html'], $.gulp.series('html')).on('change', $.browserSync.reload);
+        $.gulp.watch(['src/views/**/*.html', 'src/*.html'], $.gulp.series('html')).on('change', $.browserSync.reload);
     });
 };

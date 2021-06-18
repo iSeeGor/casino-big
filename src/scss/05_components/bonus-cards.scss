@@ -1,0 +1,226 @@
+/*============================================================================
+	#Bonus Cards (Grid & Card)
+==============================================================================*/
+.bonus-cards {
+
+	background: #161039;
+	padding: 0 24px;
+
+	&__header {
+
+		padding: 16px 0;
+	}
+
+	&__title {
+
+		font-weight: $light;
+
+		span {
+
+			font-weight: $regular;
+		}
+	}
+}
+
+.bonus-grid {
+
+	display: flex;
+	flex-wrap: wrap;
+	margin: -12px;
+
+	&__col {
+
+		margin: 12px;
+		flex: 0 0 calc(100% / 3 - 24px);
+		max-width: calc(100% / 3 - 24px);
+	}
+}
+
+// Bonus Card Header
+.bonus-card {
+
+	border: 2px solid #2C3057;
+	background: #161039;
+	transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
+
+	&:hover {
+
+		background: $colorBody;
+		border-color: $colorSky;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+		.bonus-card__button {
+
+			transform: translate(-50%, -12px);
+			opacity: 1;
+			visibility: visible;
+		}
+
+		.bonus-card__image {
+
+			&::before {
+
+				opacity: 1;
+			}
+		}
+	}
+
+	&__header {
+
+		position: relative;
+	}
+
+	&__brand {
+
+		background: rgba(255, 255, 255, 0.05);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 12px 8px 8px;
+		min-height: 58px;
+		border-bottom: 2px solid #2C3057;
+	}
+
+	&__brand-name {
+
+		font-size: 18px;
+		font-weight: $medium;
+		text-align: center;
+		-webkit-box-orient: vertical;
+		display: block;
+		display: -webkit-box;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		-webkit-line-clamp: 2;
+		max-height: 44px;
+	}
+
+	&__image {
+
+		height: 246px;
+		border-bottom: 2px solid #2C3057;
+		position: relative;
+
+		&::before {
+
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+			transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+			opacity: 0;
+		}
+
+		img {
+
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__button {
+
+		position: absolute;
+		bottom: 16px;
+		left: 50%;
+		transform: translate(-50%, );
+		font-size: 16px;
+		width: 178px;
+		padding: 14px 16px 13px;
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+	}
+}
+
+// Bonus Card Body
+.bonus-card {
+
+	&__info {
+
+		padding: 8px 8px 4px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		border-bottom: 2px solid #2C3057;
+	}
+
+	&__info-title {
+		
+		font-weight: $light;
+		text-align: center;
+	}
+
+	&__info-link {
+
+		color: $colorSky;
+		font-size: 18px;
+		font-weight: $bold;
+		text-decoration: none;
+	}
+
+	&__info-decsription {
+
+		font-size: 14px;
+		line-height: 120%;
+		font-weight: $light;
+		opacity: .7;
+	}
+
+	&__description {
+
+		padding: 8px 16px;
+		border-bottom: 2px solid #2C3057;
+	}
+
+	&__description-title {
+
+		font-size: 18px;
+		line-height: 120%;
+		margin-bottom: 4px;
+	} 
+
+	&__description-text {
+
+		font-size: 16px;
+		font-weight: $light;
+		line-height: 120%;
+		opacity: .7;
+	}
+}
+
+// Bonus Card Footer
+.bonus-card {
+
+	&__footer {
+
+		display: flex;
+	}
+
+	&__footer-item {
+
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		border-right: 2px solid #2C3057;
+		padding: 8px 8px;
+
+		&:last-child {
+
+			border: none;
+		}
+
+		span {
+
+			font-size: 14px;
+			font-weight: $light;
+		}
+	}
+}

@@ -1,0 +1,45 @@
+/*============================================================================
+	#Page Tags
+==============================================================================*/
+.page-tags {
+
+	padding: 0;
+
+	&__inner {
+
+		display: flex;
+		flex-wrap: wrap;
+		margin: -8px;
+	}
+	
+	&__link {
+
+		margin:8px 8px;
+
+		&._current {
+
+			box-shadow: none;
+			cursor: default;
+			&:hover {
+
+				background: $colorBlue;
+			}
+		}
+
+		&.button-primary--pure {
+
+			box-shadow:inset 0 0 0 1px $colorSky;
+
+			&::before,
+			&::after {
+
+				display: none;
+			}
+
+			&:hover {
+
+				background: $colorSky;
+			}
+		}
+	}
+}

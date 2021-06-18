@@ -41,10 +41,15 @@
 @import '05_components/language';
 @import '05_components/social-media';
 @import '05_components/banner-slider';
+@import '05_components/cards-section';
 @import '05_components/card';
+@import '05_components/card-game';
+@import '05_components/card-post';
 @import '05_components/rating';
 @import '05_components/bonus-cards-items';
 @import '05_components/accordion';
+@import '05_components/page-tags';
+@import '05_components/bonus-cards';
 
 
 /* partials
@@ -63,4 +68,5 @@
 
 /* pages
 ===================================================*/
-@import '07_pages/404.scss';
+@import '07_pages/404';
+@import '07_pages/game-archive';

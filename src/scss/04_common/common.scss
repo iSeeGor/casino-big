@@ -69,14 +69,19 @@
 
 	display: flex;
 	flex-wrap: wrap;
-	margin: 0 -18px;
+	margin: -18px;
 
 	&__col {
 
 		flex: 0 0 calc(100% / 3 - 36px );
 		max-width: calc(100% / 3 - 36px );
 		margin: 18px 18px;
+	}
 
+	&__col-full {
+
+		flex: 0 0 calc(100% / 1 - 36px );
+		max-width: calc(100% / 1 - 36px );
 	}
 }
 

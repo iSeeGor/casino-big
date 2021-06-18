@@ -1,0 +1,24 @@
+@@include('views/partials/header.html')
+
+	@@include('views/components/breadcrumb.html', {})
+	<div class="page-content">
+		<main class="page-content__main">
+
+			@@include('views/components/page-typography.html')
+			@@include('views/components/game-cards.html')
+
+		</main>
+		<aside class="page-content__aside">
+
+			@@include('views/widgets/widget-banner.html')
+			@@include('views/widgets/widget-promo-banner.html')
+
+		</aside>
+	</div>
+
+	<div class="background-gradients">
+		<div class="background-gradients__item background-gradients__item--big"></div>
+		<div class="background-gradients__item background-gradients__item--small"></div>
+	</div>
+
+@@include('views/partials/footer.html')

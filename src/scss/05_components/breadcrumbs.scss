@@ -1,11 +1,11 @@
 /*============================================================================
 	#BREADCRUMBS
 ==============================================================================*/
-.breadcrumb {
+.breadcrumbs {
 
-	padding: 24px 0px;
+	padding: 0 0 32px 0;
 	
-	&__list {
+	&__nav {
 
 		display: flex;
 		flex-wrap: wrap;
@@ -14,103 +14,37 @@
 
 	&__item {
 
-		display: block;
+		display: inline-block;
 		text-decoration: none;
-		color: $colorBody;
-		fill: $colorBody;
-		transition: color 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+		color: white;
+		display: flex;
+		align-items: center;
+		font-size: 16px;
+		line-height: 1;
+		font-weight: $light;
+		transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 
-		.icon-home {
+		.icon {
 
-			height: 24px;
-			width: 24px;
-			fill: inherit;
-			transition: fill 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+			margin-top: -4px;
+			margin-right: 14px;
 		}
+
 
 		&--current {
 
-			color: $colorBase;
-			max-width: 60%;
-			white-space: nowrap;
-			overflow: hidden;
-			text-overflow: ellipsis;
+			opacity: .5;
 		}
 
-		&:not(.breadcrumb__item--current):hover {
+		&:not(.breadcrumbs__item--current):hover {
 
-			// text-decoration: underline;
-			color: $colorBase;
-			fill: $colorBase;
+			color: $colorSky;
 		}
 	}
 
 	&__separator {
 		
-		line-height: 0;
-		margin: 0 13px;
-
-		.icon {
-
-			width: 16px;
-			height: 16px;
-			fill: $colorBody;
-		}
-	}
-}
-
-@include _1024 {
-
-	.breadcrumb {
-
-		padding: 16px 0px;
-	}
-}
-
-@include _768 {
-
-	.breadcrumb {
-
-		&__item {
-
-			font-size: 14px;
-
-			.icon-home {
-
-				width: 18px;
-				height: 18px;
-			}
-		}
-
-		&__separator {
-
-			margin: 0 10px;
-
-			.icon {
-
-				width: 14px;
-    			height: 14px;
-			}
-		} 
-	}
-}
-
-@include _485 {
-
-	.breadcrumb {
-
-		&__item {
-
-			font-size: 12px;
-		}
-
-		&__separator {
-
-			.icon {
-
-				width: 12px;
-    			height: 12px;
-			}
-		} 
+		margin: 0 14px 0 8px;
+		font-weight: $light;
 	}
 }

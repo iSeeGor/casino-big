@@ -1,0 +1,130 @@
+@@include('views/partials/header.html')
+
+	@@include('views/components/breadcrumb.html')
+	<div class="page-content">
+		<main class="page-content__main">
+
+			@@include('views/components/page-typography.html')
+			<section class="section-cards">
+				<header class="section-cards__header">
+					<h2 class="section-cards__title">Блог</h2>
+					<!-- <div class="section-cards__description">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores fugiat corrupti earum quam voluptatibus cumque dignissimos ipsa quae odio officia?
+					</div>
+					<div class="section-cards__tags">
+						<div class="page-tags">
+							<div class="page-tags__inner">
+								<a href="#" class="page-tags__link button-primary _current">All</a>
+								<a href="#" class="page-tags__link button-primary button-primary--pure">New games</a>
+								<a href="#" class="page-tags__link button-primary button-primary--pure">Slots</a>
+								<a href="#" class="page-tags__link button-primary button-primary--pure">Table games</a>
+								<a href="#" class="page-tags__link button-primary button-primary--pure">Uncoming games</a>
+							</div>
+						</div>
+					</div> -->
+				</header>
+
+				<div class="section-cards__body">
+					<div class="main-grid">
+						<div class="main-grid__col main-grid__col-full">
+							<article class="post-card post-card--full">
+								<div class="post-card__inner">
+									<div class="post-card__image">
+										<img src="images/demo/post-card-big-image.jpg" alt="">
+									</div>
+									<div class="post-card__category">Блог об онлайн гемблинге</div>
+									<h3 class="post-card__title">КАК ОСНОВАТЬ БИТКОИН-КАЗИНО:<br> ГИД ДЛЯ НАЧИНАЮЩИХ 2021</h3>
+									<div class="post-card__date">12 мая, 2021</div>
+									<div class="post-card__excerpt">
+										Биткоин - популярная криптовалюта, которая<br> привлекает любителей инновационных технологий.<br> Сегодня биткоин стал частью игорной индустрии,<br> cегодня биткоин стал частью игорной индустрии
+									</div>
+									<a href="#" class="post-card__button button-primary button-primary--icon">
+										Узнать больше
+										<svg class="icon icon--right">
+											<use xlink:href="symbol/sprite.svg#arrow-angel-next"></use>
+										</svg>
+									</a>
+								</div>
+							</article>
+						</div>
+						@@for(var i = 0; i < 3; i++ ){
+						<div class="main-grid__col">
+							<article class="post-card">
+								<div class="post-card__inner">
+									<div class="post-card__image">
+										<img src="images/demo/post-card-image.jpg" alt="">
+									</div>
+									<h3 class="post-card__title">КАК ОСНОВАТЬ БИТКОИН-КАЗИНО: ГИД ДЛЯ НАЧИНАЮЩИХ 2021</h3>
+									<div class="post-card__date">12 мая, 2021</div>
+									<a href="#" class="post-card__button button-primary button-primary--icon">
+										Узнать больше
+										<svg class="icon icon--right">
+											<use xlink:href="symbol/sprite.svg#arrow-angel-next"></use>
+										</svg>
+									</a>
+								</div>
+							</article>
+						</div>
+						<div class="main-grid__col">
+							<article class="post-card">
+								<div class="post-card__inner">
+									<div class="post-card__image">
+										<img src="images/demo/post-card-image.jpg" alt="">
+									</div>
+									<h3 class="post-card__title">КАК ОСНОВАТЬ БИТКОИН-КАЗИНО: ГИД ДЛЯ НАЧИНАЮЩИХ и не только начинающих 2021</h3>
+									<div class="post-card__date">12 мая, 2021</div>
+									<a href="#" class="post-card__button button-primary button-primary--icon">
+										Узнать больше
+										<svg class="icon icon--right">
+											<use xlink:href="symbol/sprite.svg#arrow-angel-next"></use>
+										</svg>
+									</a>
+								</div>
+							</article>
+						</div>
+						<div class="main-grid__col">
+							<article class="post-card">
+								<div class="post-card__inner">
+									<div class="post-card__image">
+										<img src="images/demo/post-card-image.jpg" alt="">
+									</div>
+									<h3 class="post-card__title">КАК ОСНОВАТЬ БИТКОИН-КАЗИНО</h3>
+									<div class="post-card__date">12 мая, 2021</div>
+									<a href="#" class="post-card__button button-primary button-primary--icon">
+										Узнать больше
+										<svg class="icon icon--right">
+											<use xlink:href="symbol/sprite.svg#arrow-angel-next"></use>
+										</svg>
+									</a>
+								</div>
+							</article>
+						</div>
+						}
+					</div>
+				</div>
+
+				<footer class="section-cards__footer">
+					<a href="#" class="button-primary button-primary--pure button-primary--icon">
+						Больше игр
+						<svg class="icon icon--right">
+							<use xlink:href="symbol/sprite.svg#arrow-angel-next"></use>
+						</svg>
+					</a>
+				</footer>
+			</section>
+
+		</main>
+		<aside class="page-content__aside">
+
+			@@include('views/widgets/widget-banner.html')
+			@@include('views/widgets/widget-promo-banner.html')
+
+		</aside>
+	</div>
+
+	<div class="background-gradients">
+		<div class="background-gradients__item background-gradients__item--big"></div>
+		<div class="background-gradients__item background-gradients__item--small"></div>
+	</div>
+
+@@include('views/partials/footer.html')
