@@ -1,0 +1,167 @@
+<section class="section section-reviews order-last">
+	<header class="section__header">
+		<h2 class="section__title">Отзывы</h2>
+	</header>
+
+	<div class="section__body">
+
+		<div class="review-cards js-review-cards">
+			<div class="review-cards__main">
+				@@for(var i = 0; i < 4; i++){
+					<div class="review-card">
+						<div class="review-card__inner">
+							<header class="review-card__header">
+								<div class="review-card__user">
+									<div class="review-card__avatar">
+										<img src="images/demo/user-3.jpg" alt="">
+									</div>
+									<div class="review-card__user-data">
+										<div class="review-card__name">Jane Cooper</div>
+										<div class="review-card__date">8.10.2020</div>
+									</div>
+								</div>
+
+								<div class="review-card__rating">
+									<div class="review-card__stars">
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="review-card__rating-total">4,5</div>
+								</div>
+							</header>
+
+							<div class="review-card__body">
+								<div class="review-card__text">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas vitae fugiat dolor natus aliquam optio eligendi enim atque deleniti veniam molestiae, similique minus! Culpa impedit debitis nisi rem modi asperiores aperiam quam. Nostrum itaque eligendi, neque distinctio doloremque totam. Vitae odio sunt dicta, culpa minima numquam commodi provident voluptatibus, vel aperiam expedita, quae fugiat beatae? Deleniti labore quam quis, porro, placeat laudantium mollitia adipisci qui consectetur odit ad nobis aperiam ab voluptas quia veritatis blanditiis, error sed temporibus voluptatum incidunt vel vitae nihil? Tempora repudiandae ea minus nam, sit ad et nesciunt natus saepe error. Rerum tempora possimus illo minima.
+								</div>
+							</div>
+						</div>
+					</div>
+				}
+			</div>
+
+			<div class="review-cards__collapsed">
+				@@for(var i = 0; i < 4; i++){
+					<div class="review-card">
+						<div class="review-card__inner">
+							<header class="review-card__header">
+								<div class="review-card__user">
+									<div class="review-card__avatar">
+										<img src="images/demo/user-3.jpg" alt="">
+									</div>
+									<div class="review-card__user-data">
+										<div class="review-card__name">Jane Cooper</div>
+										<div class="review-card__date">8.10.2020</div>
+									</div>
+								</div>
+
+								<div class="review-card__rating">
+									<div class="review-card__stars">
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="review-card__rating-total">4,5</div>
+								</div>
+							</header>
+
+							<div class="review-card__body">
+								<div class="review-card__text">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas vitae fugiat dolor natus aliquam optio eligendi enim atque deleniti veniam molestiae, similique minus! Culpa impedit debitis nisi rem modi asperiores aperiam quam. Nostrum itaque eligendi, neque distinctio doloremque totam. Vitae odio sunt dicta, culpa minima numquam commodi provident voluptatibus, vel aperiam expedita, quae fugiat beatae? Deleniti labore quam quis, porro, placeat laudantium mollitia adipisci qui consectetur odit ad nobis aperiam ab voluptas quia veritatis blanditiis, error sed temporibus voluptatum incidunt vel vitae nihil? Tempora repudiandae ea minus nam, sit ad et nesciunt natus saepe error. Rerum tempora possimus illo minima.
+								</div>
+							</div>
+						</div>
+					</div>
+				}
+			</div>
+
+			<div class="review-cards__footer">
+				<button class="button-primary button-primary--pure button-primary--icon"
+					data-collapse-moretext="Показать все"
+					data-collapse-lesstext="Скрыть">
+					<span>Показать все</span>
+					<svg class="icon icon--right">
+						<use xlink:href="symbol/sprite.svg#arrow-angel-next"></use>
+					</svg>
+				</button>
+			</div>
+		</div>
+
+		<div class="review-form-block">
+			<div class="review-form-block__header">
+				<h4 class="review-form-block__title">Оставить свой отзыв</h4>
+			</div>
+
+			<div class="review-form-block__body">
+				<form class="review-form">
+					<div class="review-form__row">
+						<div class="review-form__group">
+							<input type="text" placeholder="Имя" class="review-form__input review-form__input--name">
+							<input type="text" placeholder="Ваш email" class="review-form__input review-form__input--email">
+						</div>
+					</div>
+					<div class="review-form__row">
+						<textarea class="review-form__text" placeholder="Напишите текст вашего отзыва"></textarea>
+					</div>
+
+					<div class="review-form__row">
+						<div class="review-form__rating">
+							<div class="review-form__stars">
+								<svg class="icon i-base i-base--sky i-stroke--sky">
+									<use xlink:href="symbol/sprite.svg#star"></use>
+								</svg>
+								<svg class="icon i-base i-stroke i-stroke--sky">
+									<use xlink:href="symbol/sprite.svg#star"></use>
+								</svg>
+								<svg class="icon i-base i-stroke i-stroke--sky">
+									<use xlink:href="symbol/sprite.svg#star"></use>
+								</svg>
+								<svg class="icon i-base i-stroke i-stroke--sky">
+									<use xlink:href="symbol/sprite.svg#star"></use>
+								</svg>
+								<svg class="icon i-base i-stroke i-stroke--sky">
+									<use xlink:href="symbol/sprite.svg#star"></use>
+								</svg>
+							</div>
+
+							<div class="review-form__rating-total">
+								<span>1/</span>10
+							</div>
+						</div>
+					</div>
+
+					<div class="review-form__row">
+
+						<button class="review-form__submit button-primary">Отправить</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+	</div>
+</section>

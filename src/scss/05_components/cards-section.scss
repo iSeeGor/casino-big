@@ -4,14 +4,24 @@
 
 .section-cards {
 
+	margin-bottom: 56px;
+
 	&__header {
 
-		margin: 0 0 24px 0;
+		margin: 0 0 32px 0;
+
+		&--morelink {
+
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
 	}
 
 	&__title {
 
 		margin: 0 0 8px 0;
+		font-size: 38px;
 	}
 
 	&__description {
@@ -21,7 +31,7 @@
 
 	&__tags {
 
-		margin: 16px 0 16px 0 ;
+		margin: 24px 0 24px 0 ;
 	}
 
 	&__footer {
@@ -29,6 +39,29 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin: 32px 0 0 0;
+		margin: 40px 0 0 0;
+	}
+}
+
+.section-cards--home {
+
+	margin-bottom: 72px;
+
+	.section-cards__header {
+
+		margin-bottom: 48px;
+	}
+
+	.section-cards__footer {
+
+		margin-top: 48px;
+	}
+}
+
+.section-cards--blog {
+
+	.section-cards__header {
+
+		margin-bottom: 16px;
 	}
 }

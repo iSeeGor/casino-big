@@ -2,28 +2,6 @@
 	#Card & Section Cards
 ==============================================================================*/
 
-.section-cards {
-
-	margin-bottom: 80px;
-
-	.section__header {
-
-		margin-bottom: 48px;
-	}
-
-	.section__body {
-
-		margin-bottom: 48px;
-	}
-
-	.section__footer{
-
-		display: flex;
-		justify-content: center;
-	}
-
-}
-
 .casino-grid {
 
 	&__col {
@@ -103,7 +81,7 @@
 
 	&__col {
 
-		border-right: 2px solid #2C3057;
+		border-right: 2px solid $colorBorder;
 		flex: 0 0 auto;
 		
 		&:last-child {
@@ -171,8 +149,6 @@
 
 	&__amount {
 
-		max-width: 224px;
-		// width: 100%;
 		margin-bottom: 20px;
 	}
 
@@ -281,7 +257,7 @@
 		text-align: center;
 		position: relative;
 		padding: 5px 10px 1px;
-		border-right: 2px solid #2C3057;
+		border-right: 2px solid $colorBorder;
 		flex: 1 1 auto;
 
 		&:first-child {
@@ -318,6 +294,8 @@
 }
 
 .slider-deposit {
+
+	max-width: 224px;
 
 	.slider-items__item {
 
@@ -382,7 +360,7 @@
 			position: absolute;
 			height: 100%;
 			width: 2px;
-			background: #2C3057;
+			background: $colorBorder;
 			top: 0;
 			right: 0;
 		}
@@ -450,7 +428,7 @@
 		width: 18px;
 		height: 18px;
 		padding-top: 2px;
-		background: #2C3057;
+		background: $colorBorder;
 		border-radius: 50%;
 		font-size: 12px;
 		color: #9597AB;

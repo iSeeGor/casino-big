@@ -13,8 +13,8 @@
 	margin: 0;
 	padding: 0;
 	display: flex;
-	border-left: 1px solid #2C3057; 
-	border-right: 1px solid #2C3057; 
+	border-left: 1px solid $colorBorder; 
+	border-right: 1px solid $colorBorder; 
 	position: relative;
 
 	a {
@@ -32,14 +32,14 @@
 		display: flex;
 		align-items: center;
 		padding: 9px 48px 9px;
-		border-left: 1px solid #2C3057; 
-		border-right: 1px solid #2C3057;
+		border-left: 1px solid $colorBorder; 
+		border-right: 1px solid $colorBorder;
 
 		&::before,
 		&::after {
 
 			content: '';
-			background: #2C3057;
+			background: $colorBorder;
 			position: absolute;
 			top: 0;
 			left: 0;

@@ -8,8 +8,16 @@
 	height: 17px;
 }
 
+.i-large {
+
+	width: 30px;
+	height: 30px;
+}
+
+
 .i-star--sky,
-.i-base--sky {
+.i-base--sky,
+.i-large--sky {
 
 	fill: $colorSky;
 }
@@ -20,8 +28,35 @@
 	fill: $colorBlue;
 }
 
+.i-base--green, 
+.i-large--green {
+
+	fill: $colorGreen;
+}
+
+.i-base--red, 
+.i-large--red {
+
+	fill: $colorRed;
+}
+
 .i-base {
 
 	width: 20px;
 	height: 20px;
+}
+
+.i-stroke {
+
+	fill: transparent;
+}
+
+.i-stroke--sky {
+
+	stroke: $colorSky;
+}
+
+.icon--down {
+
+	transform: rotate(90deg);
 }

@@ -1,0 +1,430 @@
+/*============================================================================
+	#Сasino Gutenberg Blocks
+==============================================================================*/
+// Block Table
+.page-block {
+
+	background: $colorDarkBlue;
+	border-radius: 6px;
+	padding: 24px 40px 40px;
+	margin: 24px 0;
+
+	&--notitle {
+
+		padding: 40px 40px 40px;
+	}
+
+	&__header {
+
+		margin-bottom: 16px;
+	}
+
+	&__title {
+
+		font-size: 24px;
+		margin: 0 0 0 0;
+	}
+
+}
+
+// Block Table
+.page-block-table {
+
+	border: 2px solid $colorBorder;
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 18px;
+
+	tr {
+
+		&:nth-child(even) {
+
+			background: rgba(255, 255, 255, 0.05);
+		} 
+	}
+
+	th {
+		
+		font-weight: $medium;
+		text-align: left;
+		border-right: 2px solid $colorBorder;
+		width: 248px
+	}
+
+	th, td {
+
+		padding: 8px 16px 6px 16px;
+		// line-height: 1;
+	}
+
+	td {
+
+		font-weight: $light;
+		color: rgba(255, 255, 255, 0.7);
+	}
+}
+
+// Product Bloks
+.product-props-blocks {
+
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -20px;
+}
+
+.product-props-block {
+
+	margin: 0 20px;
+	flex: 0 0 calc(100% / 3 - 40px);
+	max-width: calc(100% / 3 - 40px);
+	border: 2px solid $colorBorder;
+
+	&__header {
+
+		background: rgba(255, 255, 255, 0.05);
+		padding: 16px 16px;
+	}
+
+	&__title {
+
+		font-size: 18px;
+		font-weight: $medium;
+		text-align: center;
+	}
+}
+
+//Games Block
+.games-props {
+
+	padding: 14px 4px 10px;
+
+	&__list {
+
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__item {
+
+		flex: 0 0 50%;
+		max-width: 50%;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		margin: 11px 0;
+		position: relative;
+		padding: 0 4px;
+
+		.icon {
+
+			margin-bottom: 6px;
+		}
+
+		span {
+
+			text-align: center;
+			font-size: 18px;
+			color: white;
+			opacity: .7;
+			font-weight: $light;
+		}
+	}
+
+	&__item {
+
+		&::before,
+		&::after {
+			
+			content: '';
+			position: absolute;
+			top: 2px;
+			left: calc(50% - 38px);
+			height: 1px;
+			width: 13px;
+			background: $colorRed;
+			transform: translateX(-50%) rotate(45deg);
+		}
+
+		&::after {
+
+			transform: translateX(-50%) rotate(-45deg);
+		}
+		
+	}
+
+	&__item--checked {
+
+		&::before,
+		&::after {
+
+			background: $colorGreen;
+			left: calc(50% - 28px);
+			width: 10px;
+		}
+
+		&::before {
+
+			width: 5px;
+			transform-origin: -3px -5px;
+		}
+	}
+}
+
+// Bonus Props
+.bonus-props {
+
+	font-size: 18px;
+	padding: 24px 24px;
+
+	&__top {
+
+		padding: 8px 0;
+		text-align: center;
+	}
+
+	&__top-item {
+
+		margin-bottom: 6px;
+
+		span {
+
+			color: $colorSky;
+			font-weight: $medium;
+			margin: 0 2px;
+		}
+	}
+
+	&__table {
+
+		margin: 40px 0;
+	
+	}
+
+	&__table-row {
+
+		display: flex;
+	}
+
+	&__table-title,
+	&__table-value {
+
+		flex: 0 0 50%;
+		max-width: 50%;
+		font-weight: $light;
+		padding: 4px 0;
+	}
+
+	&__table-title {
+
+		border-right: 1px solid $colorBorder;
+	}
+
+	&__table-value {
+
+		margin-left: 24px;
+		opacity: .7;
+	}
+
+	&__button {
+
+		padding: 20px 24px 16px;
+		width: 100%;
+		margin: 10px 0;
+	}
+}
+
+//Rating Props
+.reting-props {
+
+	font-size: 18px;
+	padding: 24px 24px;
+
+	&__table {
+
+		padding: 3px 0;
+		font-weight: $light;
+	}
+
+	&__table-row {
+
+		display: flex;
+	}
+
+	&__table-title,
+	&__table-val {
+
+		padding: 5px 0;
+	}
+
+	&__table-title {
+
+		flex: 0 0 67%;
+		border-right: 1px solid $colorBorder;
+	}
+
+	&__table-val {
+
+		padding-left: 14px;
+		color: $colorSky;
+	}
+}
+
+// Rating Total
+.reting-props {
+
+	&__total {
+
+		display: flex;
+		align-items: center;
+		line-height: 1;
+		padding: 16px 0 0;
+	}
+
+	&__total-icon {
+
+		font-size: 38px;
+		color: $colorSky;
+		padding-top: 6px;
+	}
+
+	&__total-val {
+		
+		width: 64px;
+		height: 64px;
+		border: 1px solid $colorGreen;
+		border-radius: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-weight: $light;
+		font-size: 28px;
+		color: $colorGreen;
+		padding-top: 4px;
+		margin: 0 18px;
+	}
+
+	&__total-result {
+
+		font-size: 18px;
+		font-weight: $medium;
+	}
+}
+
+// Amount Props
+.heading-w-icon {
+
+	display: flex;
+	align-items: center;
+	color: white;
+
+	.icon {
+
+		margin-right: 16px;
+	}
+
+	&__content {
+
+		margin-bottom: -6px;
+	}
+
+	&__title {
+
+		font-size: 18px;
+		line-height: 1;
+		font-weight: $medium;
+	}
+
+	&__subtitle {
+
+		font-size: 16px;
+		line-height: 1;
+		font-weight: $light;
+		opacity: .7;
+	}
+}
+
+.amount-props {
+
+	&__top {
+
+		margin-bottom: 16px;
+	}
+
+	&__table {
+
+		width: 100%;
+		border: 2px solid $colorBorder;
+		border-collapse: collapse;
+		font-size: 18px;
+		color: rgba(255, 255, 255, 0.7);
+		font-weight: $light;
+
+		tr {
+
+			border-bottom: 2px solid $colorBorder;
+			&:last-child {
+
+				border-bottom: none;
+			}
+		}
+
+		th {
+
+			border-right: 2px solid $colorBorder;
+			padding: 20px 24px;
+			text-align: left;
+		}
+
+		td {
+
+			padding: 20px 34px;
+		}
+
+		td.amount-props__table-items {
+
+			display: flex;
+
+			.heading-w-icon {
+
+				margin-right: 32px;
+				&:last-child {
+
+					margin-right: 0;
+				}
+			}
+		}
+		
+	}
+
+	&__items {
+
+		border: 2px solid $colorBorder;
+		display: flex;
+		justify-content: space-between;
+		padding: 20px 24px;
+	}
+
+	&__item {
+
+		font-size: 18px;
+		line-height: 1.4;
+		font-weight: $medium;
+		display: flex;
+		align-items: center;
+		margin-right: 32px;
+		flex: 0 1 auto;
+
+		&:last-child {
+
+			margin-right: 0;
+		}
+
+		.icon {
+
+			flex: 0 0 auto;
+			margin-left: 16px;
+		}
+	}
+}

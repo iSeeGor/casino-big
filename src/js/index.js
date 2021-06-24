@@ -6,9 +6,14 @@ jQuery(document).ready(function($){
 
 	// components
 	bannerSlider($);
-	currencySlider($);
+	cardSliders($);
 	cardBonusDropdown($);
 	accordionFAQ();
+	futuredSlider();
+
+	// Reviews
+	reviewCollapse($);
+	
 
 	// close outside 
 	document.addEventListener("click", function(event) {
@@ -43,6 +48,14 @@ const languageSwitcher = ($) => {
 }
 
 const backgroundGradientsHandler = ($) => {
+
+	if(!document.querySelector('.section-typography')) {
+
+		document.querySelector('.background-gradients__item--big').style.position = 'absolute';
+		document.querySelector('.background-gradients__item--small').style.position = 'absolute';
+
+		return;
+	}
 	
 
 	$(window).on('scroll', function(){
@@ -100,7 +113,7 @@ const bannerSlider = ($) => {
 	});
 };
 
-const currencySlider = ($) => {
+const cardSliders = ($) => {
 
 	flagsSlider();
 	depositSlider();
@@ -238,6 +251,16 @@ const currencySlider = ($) => {
 		});
 	});
 
+	//Enable Autoplay
+	if($('.props-slider').attr('data-swiper-autoplay')){
+
+		let sliders = $('.props-slider').find('.swiper-container');
+		sliders.each(function(){
+
+			$(this)[0].swiper.autoplay.start();
+		});
+	}
+
 }
 
 const cardBonusDropdown = ($) => {
@@ -276,4 +299,67 @@ const accordionFAQ = () => {
 		$(this).toggleClass('_active');
 		$(this).siblings('.accordion__body').slideToggle(400);
 	});
+}
+
+const futuredSlider = () => {
+
+	let slider;
+
+	slider = new Swiper('.futured-games .swiper-container', {
+
+		spaceBetween : 20,
+		slidesPerView : 4,
+		speed : 1400,
+		loop : true,
+
+		autoplay : {
+
+			delay: 1200,
+			disableOnInteraction : false
+		},
+
+		pagination : {
+
+			el : '.futured-games__slider-bullets',
+			type : 'bullets',
+			clickable: true
+		},
+
+		navigation : {
+
+			nextEl: '.button-slider-nav--next',
+			prevEl: '.button-slider-nav--prev',
+		},
+	});
+};
+
+const reviewCollapse = ($) => {
+
+	let button = $('.js-review-cards').find('.button-primary');
+
+	let textMore = button.attr('data-collapse-moretext');
+	let textLess = button.attr('data-collapse-lesstext');
+
+	let collapsedBlock = $('.js-review-cards').find('.review-cards__collapsed');
+
+	function collapsedBlockToggle(){
+
+		collapsedBlock.slideToggle(400);
+
+		if(!button.hasClass('_active')){
+
+			button.find('span').html(textMore);
+			button.addClass('_active');
+		} else {
+
+			button.find('span').html(textLess);
+			button.removeClass('_active');
+		}
+	}
+
+	collapsedBlockToggle();
+
+	button.on('click', collapsedBlockToggle);
+
+	console.log(button);
 }

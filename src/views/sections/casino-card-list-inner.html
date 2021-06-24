@@ -1,0 +1,32 @@
+<section class="section-cards section-cards--casino">
+	<header class="section-cards__header section-cards__header--morelink">
+		<h1 class="section-cards__title">
+			Топ-казино
+		</h1>
+		<a href="#" class="button-primary button-primary--pure button-primary--icon">
+			Все казино
+			<svg class="icon icon--right">
+				<use xlink:href="symbol/sprite.svg#arrow-angel-next"></use>
+			</svg>
+		</a>
+	</header>
+
+	<div class="section-cards__body">
+		<div class="casino-grid">
+			@@for (var i = 0; i < 9; i++) {
+				<div class="casino-grid__col">
+					@@include('../components/casino-card.html')
+				</div>
+			}
+		</div>
+	</div>
+
+	<footer class="section-cards__footer">
+		<a href="#" class="button-primary button-primary--pure button-primary--icon">
+			Смотреть все
+			<svg class="icon icon--right">
+				<use xlink:href="symbol/sprite.svg#arrow-angel-next"></use>
+			</svg>
+		</a>
+	</footer>
+</section>

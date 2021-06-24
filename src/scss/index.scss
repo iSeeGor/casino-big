@@ -45,11 +45,15 @@
 @import '05_components/card';
 @import '05_components/card-game';
 @import '05_components/card-post';
+@import '05_components/card-data';
 @import '05_components/rating';
 @import '05_components/bonus-cards-items';
 @import '05_components/accordion';
 @import '05_components/page-tags';
 @import '05_components/bonus-cards';
+@import '05_components/c-blocks';
+@import '05_components/flexible-content';
+@import '05_components/futured-games';
 
 
 /* partials
@@ -58,6 +62,7 @@
 @import '06_partials/footer.scss';
 @import '06_partials/modals.scss';
 @import '06_partials/faq.scss';
+@import '06_partials/reviews.scss';
 
 
 /* widgets
@@ -69,4 +74,6 @@
 /* pages
 ===================================================*/
 @import '07_pages/404';
-@import '07_pages/game-archive';
+@import '07_pages/single';
+@import '07_pages/casino';
+@import '07_pages/page-game';
