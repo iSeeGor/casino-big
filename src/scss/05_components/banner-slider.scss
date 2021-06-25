@@ -12,6 +12,7 @@
 		border-radius: 16px;
 		min-height: 544px;
 		box-sizing: border-box;
+
 	}
 
 	&__image-bg {
@@ -35,6 +36,7 @@
 	&__title {
 
 		font-size: 36px;
+		max-width: 450px;
 		margin: 0 0 0 0;
 		text-transform: uppercase;
 	}
@@ -42,6 +44,7 @@
 	&__sub-title {
 
 		font-size: 28px;
+		max-width: 450px;
 		font-weight: $medium;
 		margin: 0 0 16px 0;
 	}
@@ -51,6 +54,8 @@
 		font-weight: $light;
 		letter-spacing: 0.05em;
 		margin: 0 0 0 0;
+		min-height: 66px;
+		max-width: 355px;
 	}
 
 	.button-primary {
@@ -58,3 +63,155 @@
 		margin-top: 48px;
 	}
 }	
+
+@media (min-width: 1200px) and (max-width: 1380px){
+	
+	.banner-slider {
+
+		&__slide {
+
+			min-height: 500px;
+		}
+
+		&__content {
+
+			margin-top: 24px;
+		}
+	}
+}
+
+@media (max-width: 980px){
+	
+	.banner-slider {
+
+		&__content {
+
+			margin-top: 24px;
+		} 
+
+		&__slide {
+
+			min-height: 52vw;
+		}
+	}
+}
+
+@media (max-width:880px) {
+
+	.banner-slider {
+
+		&__content {
+
+			margin-top: 0px;
+		}
+
+		&__slide {
+
+			min-height: 417px;
+		} 
+
+	}
+}
+
+@media (max-width: 768px) {
+
+	.banner-slider {
+
+		&__title {
+
+			font-size: 28px;
+			max-width: 400px;
+			margin-bottom: 8px;
+		}
+
+		&__sub-title {
+
+			font-size: 24px;
+			max-width: 400px;
+		}
+
+		.button-primary {
+			margin-top: 32px;
+		}
+
+		&__slide {
+
+			padding: 56px 40px;
+		}
+
+		.swiper-pagination {
+
+			bottom: 24px;
+		}
+
+		
+	}
+}
+
+
+@media (max-width: 680px) {
+
+	.banner-slider {
+
+		&__image-bg	{
+
+			&::before {
+
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				background: linear-gradient(270.52deg, #000000 0.47%, rgba(0, 0, 0, 0) 61.11%);
+			}
+		}
+	}
+}
+
+@media (max-width: 580px) {
+
+	.banner-slider {
+
+		&__title {
+
+			font-size: 26px;
+			margin-bottom: 12px;
+		}
+
+		&__sub-title {
+
+			font-size: 20px;
+			margin-bottom: 18px;
+		}
+
+
+		&__text {
+
+			max-width: 300px;
+		}
+	}
+}
+
+@media (max-width: 480px) {
+
+	.banner-slider {
+
+		&__slide {
+
+			padding: 56px 32px;
+		}
+		
+		&__title {
+
+			font-size: 24px;
+			margin-bottom: 12px;
+		}
+
+		&__sub-title {
+
+			font-size: 18px;
+			margin-bottom: 18px;
+		}
+	}
+}

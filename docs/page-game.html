@@ -1,0 +1,1401 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>Bloss</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<!--== Preload Fonts -->
+	<link rel="preload" href="fonts/MullerRegular.woff2" as="font" type="font/woff" crossorigin="">
+	<link rel="preload" href="fonts/MullerMedium.woff2" as="font" type="font/woff" crossorigin="">
+	<link rel="preload" href="fonts/MullerBold.woff2" as="font" type="font/woff" crossorigin="">
+
+	<!--== favicon  -->
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/site.webmanifest">
+	<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#264066">
+	<meta name="msapplication-TileColor" content="#ffc40d">
+	<meta name="theme-color" content="#ffffff">
+
+	<link rel="stylesheet" href="css/vendor.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+
+<body class="body" id="body">
+	<div class="site">
+		<div class="site-overlay"></div>
+
+		<div class="header-mobile">
+			<div class="container">
+				<a href="/" class="logo header-mobile__logo"><img src="images/logo.png" alt="Header Mobile Logo" width="123"></a>
+
+				<button class="hamburger hamburger--squeeze" type="button">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+				</button>
+			</div>
+		</div>
+
+		<div class="offcanvas-search">
+			<div class="container">
+				<div class="offcanvas-search__inner">
+					<form class="offcanvas-search-form">
+						<input type="text" class="offcanvas-search-form__input" placeholder="Search word...">
+						<button type="submit" class="offcanvas-search-form__submit button-primary">
+							<svg class="icon i-base">
+								<use xlink:href="symbol/sprite.svg#search"></use>
+							</svg>
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<header class="header">
+			<div class="header__inner container">
+
+				<div class="header__logo">
+					<a href="/" class="logo">
+						<img src="images/logo.png" alt="Header Logo" width="123">
+					</a>
+				</div>
+				
+				<nav class="header-nav header__nav">
+					<ul class="main-menu">
+						<li class="">
+							<a href="#">
+								<svg><use xlink:href="symbol/sprite.svg#slot-machine"></use></svg>
+								Онлайн-казино
+								<button class="icon-arrow button">
+									<svg><use xlink:href="symbol/sprite.svg#arrow-angel-next"></use></svg>
+								</button>
+							</a>
+
+							<div class="sub-menu megamenu">
+								<div class="megamenu__mobile">
+									<button class="button megamenu__close-submenu">
+										<svg class="icon i-base">
+											<use xlink:href="symbol/sprite.svg#arrow-angel-next"></use>
+										</svg>
+									</button>
+								</div>
+								<div class="megamenu__row">
+									<div class="megamenu__col megamenu__col-3">
+										<h3 class="megamenu__col-title">Онлайн-казино</h3>
+										<ul class="megamenu__list">
+											<li class="active"><a href="#">Топ онлайн-казино</a></li>
+											<li><a href="#">Недавно открытые казино</a></li>
+											<li><a href="#">Известные бренды</a></li>
+											<li><a href="#">Все казино</a></li>
+										</ul>
+									</div>
+									<div class="megamenu__col megamenu__col-3">
+										<h3 class="megamenu__col-title">Популярные фильтры</h3>
+										<ul class="megamenu__list">
+											<li><a href="#">Казино с мобильной версией</a></li>
+											<li><a href="#">Биткоин/крипто казино</a></li>
+											<li><a href="#">Казино с live-рулеткой</a></li>
+											<li><a href="#">Казино для хайроллеров</a></li>
+											<li><a href="#">Анонимные казино</a></li>
+										</ul>
+									</div>
+									<div class="megamenu__col megamenu__col-3">
+										<h3 class="megamenu__col-title">Казино по методу оплаты</h3>
+										<ul class="megamenu__list">
+											<li><a href="#">Mastercard казино</a></li>
+											<li><a href="#">VISA казино</a></li>
+											<li><a href="#">QiWi казино</a></li>
+											<li><a href="#">Приват24 казино</a></li>
+											<li><a href="#">Neteller казино</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="#">
+								<svg><use xlink:href="symbol/sprite.svg#dice"></use></svg>
+								Игры
+								<button class="icon-arrow button">
+									<svg><use xlink:href="symbol/sprite.svg#arrow-angel-next"></use></svg>
+								</button>
+							</a>
+
+							<div class="sub-menu megamenu">
+								<div class="megamenu__mobile">
+									<button class="button megamenu__close-submenu">
+										<svg class="icon i-base">
+											<use xlink:href="symbol/sprite.svg#arrow-angel-next"></use>
+										</svg>
+									</button>
+								</div>
+								<div class="megamenu__row">
+									<div class="megamenu__col megamenu__col-3">
+										<h3 class="megamenu__col-title">Онлайн-казино 2</h3>
+										<ul class="megamenu__list">
+											<li class="active"><a href="#">Топ онлайн-казино</a></li>
+											<li><a href="#">Недавно открытые казино</a></li>
+											<li><a href="#">Известные бренды</a></li>
+											<li><a href="#">Все казино</a></li>
+										</ul>
+									</div>
+									<div class="megamenu__col megamenu__col-3">
+										<h3 class="megamenu__col-title">Популярные фильтры</h3>
+										<ul class="megamenu__list">
+											<li><a href="#">Казино с мобильной версией</a></li>
+											<li><a href="#">Биткоин/крипто казино</a></li>
+											<li><a href="#">Казино с live-рулеткой</a></li>
+											<li><a href="#">Казино для хайроллеров</a></li>
+											<li><a href="#">Анонимные казино</a></li>
+										</ul>
+									</div>
+									<div class="megamenu__col megamenu__col-3">
+										<h3 class="megamenu__col-title">Казино по методу оплаты</h3>
+										<ul class="megamenu__list">
+											<li><a href="#">Mastercard казино</a></li>
+											<li><a href="#">VISA казино</a></li>
+											<li><a href="#">QiWi казино</a></li>
+											<li><a href="#">Приват24 казино</a></li>
+											<li><a href="#">Neteller казино</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="#">
+								<svg><use xlink:href="symbol/sprite.svg#diamond"></use></svg>
+								Бонусы
+								<button class="icon-arrow button">
+									<svg><use xlink:href="symbol/sprite.svg#arrow-angel-next"></use></svg>
+								</button>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<svg><use xlink:href="symbol/sprite.svg#cherry"></use></svg>
+								Блог
+								<button class="icon-arrow button">
+									<svg><use xlink:href="symbol/sprite.svg#arrow-angel-next"></use></svg>
+								</button>
+							</a>
+						</li>
+					</ul>
+				</nav>
+
+				<div class="header__authorization">
+					<a href="#" class="button-primary button-primary--small">Войти</a>
+					<a href="#" class="button-primary button-primary--small button-primary--dark">Регистрация</a>
+				</div>
+
+				<div class="header__controll">
+					<button class="button button-search js-offcanvas-search-button">
+						<svg class="icon">
+							<use xlink:href="symbol/sprite.svg#search"></use>
+						</svg>
+					</button>
+
+					<div class="language js-lang-switch">
+						<div class="language__header">RU</div>
+						<div class="language__dropdown">
+							<span>UA</span>
+							<span>EN</span>
+						</div>
+					</div>
+				</div>
+
+				<button class="button header__close-button"></button>
+			</div>
+		</header>
+
+			<div class="site__body">
+		
+
+
+
+	<div class="breadcrumbs">
+	<nav class="breadcrumbs__nav">
+
+		<a class="breadcrumbs__item" href="/">
+			<svg class="icon i-base i-base--sky">
+				<use xlink:href="symbol/sprite.svg#home"></use>
+			</svg>
+			Главная
+		</a>
+		<span class="breadcrumbs__separator">/</span>
+		<span class="breadcrumbs__item breadcrumbs__item--current">
+			<svg class="icon i-base i-base--sky">
+				<use xlink:href="symbol/sprite.svg#777"></use>
+			</svg>
+
+			Топ-казино	
+			
+		</span>
+	</nav>
+</div>
+
+	<div class="page-content page-game">
+		<main class="page-content__main">
+
+			<section class="section section-typography" style="order: 999">
+	<!-- <header class="section__header">
+		<h2 class="section__title">Игровые автоматы онлайн и обзоры казино</h2>
+	</header> -->
+
+	<div class="section__body typography">
+
+		<h4> Каталог онлайн казино на сайте </h4>
+
+		<p>На страницах сайта вы найдете только самые лучшие игорные заведения, которые занимают лидирующие позиции по отзывам, выплатам, надежности в сохранности персональной информации и щедрой бонусной политикой.</p>
+
+		<ul>
+			<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quo ut nobis eius nulla voluptatem, aliquid saepe sequi? Sapiente, eum.</li>
+			<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quo ut nobis eius nulla voluptatem, aliquid saepe sequi? Sapiente, eum.</li>
+			<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quo ut nobis eius nulla voluptatem, aliquid saepe sequi? Sapiente, eum.</li>
+			<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quo ut nobis eius nulla voluptatem, aliquid saepe sequi? Sapiente, eum.</li>
+			<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quo ut nobis eius nulla voluptatem, aliquid saepe sequi? Sapiente, eum.</li>
+		</ul>
+
+		<p>Не последнюю роль при выборе клуба играет и на удобство использования. Здесь лидирует WILLIAM HILL. Он совместим со всеми современными операционными системами. Это значит, что без каких-либо погрешностей можно играть как на ПК, так и на смартфонах, планшетах. А приложения для Android, iOS от SlotV гарантируют своим юзерам повышенный комфорт сессии.</p>
+
+
+		<p><a href="#">2. Игровые автоматы.</a> Это одна из самых крупных групп развлечений, которая представлена несколькими сотнями разнообразных барабанных слотов. Речь идет не только о классических играх онлайн казино с тремя барабанами и минимумом опций, но и о современных новинках аппаратов с бонусными раундами, риск-туром, специальными знаками и дополнительными множителями. В них обычно по пять барабанов, хотя встречаются и шестибарабанные аппараты;</p>
+
+		<p><a href="#">3. Игровые автоматы.</a> Это одна из самых крупных групп развлечений, которая представлена несколькими сотнями разнообразных барабанных слотов. Речь идет не только о классических играх онлайн казино с тремя барабанами и минимумом опций, но и о современных новинках аппаратов с бонусными раундами, риск-туром, специальными знаками и дополнительными множителями. В них обычно по пять барабанов, хотя встречаются и шестибарабанные аппараты;</p>
+
+		<h5>#H5 Он совместим со всеми современными. В них обычно по пять барабанов, хотя встречаются и шестибарабанные аппараты;</h5>
+
+		<p>Кроме бесплатного режима в игровые автоматы предлагается играть с денежными ставками. Прежде, чем приступить к этому, необходимо внести средства на депозитный счет выбранного казино онлайн. Для этих целей, в зависимости от предлагаемых заведениями платежных систем, могут использоваться Qiwi, Webmoney, Яндекс.Деньги, пластиковые карты типа Visa, MasterCard, Neteller, Skrill, Альфа-Клик, Сбербанк Онлайн. Для финансовых операций на главных страницах выводится отдельный раздел «Касса». В надежных онлайн-казино средства на счет поступают практически мгновенно, а это значит, что уже спустя несколько минут после их зачисления можно играть на деньги в любые игры казино и онлайн слоты. Также удастся протестировать и другие виды развлечений — блекджек, покер, рулетку или даже баккара.</p>
+
+		<p>В получении реальных выигрышей при помощи слотов также будут способствовать специальные символы с расширенными возможностями, призовые опции, риск-раунд на удвоение, фриспины, респины, дополнительные множители. Для удобства пользователей, современные игровые площадки на странице каждой игры в казино предоставляют подробную информацию относительно характеристик аппаратов, наличия или отсутствия особых знаков, указаны возможные минимальные и максимальные размеры ставок. Также эта информация позволяет ознакомиться с геймплеем, символами, базовыми комбинациями и их выплатными коэффициентами.</p>
+	</div>
+</section>
+
+			<div class="game-player">
+				<div class="game-player__header">
+					<div class="game-player__title">
+						Book of Dead Играть бесплатно в демо-версии
+						<span>&nbsp;от Play'n GO</span>
+					</div>
+				</div>
+				<div class="game-player__poster">
+					<img src="images/demo/casino-2.jpg" alt="">
+					<button class="button-play button"></button>
+				</div>
+				<div class="game-player__footer">
+					<div class="game-player__buttons">
+						<a href="#" class="button-primary button-primary--gradient">Играть на деньги</a>
+						<a href="#" class="button-primary button-primary--pure">Читать обзор</a>
+					</div>
+					<div class="game-player__reports">
+						<a href="#" class="button-report">
+							<svg class="icon i-base">
+								<use xlink:href="symbol/sprite.svg#like_second"></use>
+							</svg>
+							<span>Игра не работает</span>
+						</a>
+
+						<a href="#" class="button-report">
+							<svg class="icon i-base">
+								<use xlink:href="symbol/sprite.svg#attention"></use>
+							</svg>
+							<span>Сообщить о проблеме</span>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="game-bio">
+				<div class="game-bio__aside">
+					<div class="game-bio__widget game-bio__logo">
+						<img src="images/demo/casino-4.jpg" alt="">
+					</div>
+
+					<div class="game-bio__widget game-info">
+						<div class="game-info__header">
+							<h4 class="game-info__title game-bio__widget-title">
+								<svg class="icon i-base i-base--sky">
+									<use xlink:href="symbol/sprite.svg#dice"></use>
+								</svg>
+								Информация об игре
+							</h4>
+						</div>
+
+						<ul class="game-info__list">
+							<li class="game-info__list-item" >
+								<div class="game-info__item-title">Прогрессивный джекпот</div>
+								<div class="game-info__item-val">
+									<svg class="icon i-base i-base--red">
+										<use xlink:href="symbol/sprite.svg#close"></use>
+									</svg>
+								</div>
+							</li>
+							<li class="game-info__list-item" >
+								<div class="game-info__item-title">Настраиваемая выигрышная линия</div>
+								<div class="game-info__item-val">
+									<svg class="icon i-base i-base--green">
+										<use xlink:href="symbol/sprite.svg#plus-large"></use>
+									</svg>
+								</div>
+							</li>
+							<li class="game-info__list-item" >
+								<div class="game-info__item-title">Функция азартной игры</div>
+								<div class="game-info__item-val">
+									<svg class="icon i-base i-base--red">
+										<use xlink:href="symbol/sprite.svg#close"></use>
+									</svg>
+								</div>
+							</li>
+							<li class="game-info__list-item" >
+								<div class="game-info__item-title">Фриспины</div>
+								<div class="game-info__item-val">
+									<svg class="icon i-base i-base--green">
+										<use xlink:href="symbol/sprite.svg#plus-large"></use>
+									</svg>
+								</div>
+							</li>
+							<li class="game-info__list-item" >
+								<div class="game-info__item-title">Автоматическая игра</div>
+								<div class="game-info__item-val">
+									<svg class="icon i-base i-base--green">
+										<use xlink:href="symbol/sprite.svg#plus-large"></use>
+									</svg>
+								</div>
+							</li>
+							<li class="game-info__list-item" >
+								<div class="game-info__item-title">Быстрые спины</div>
+								<div class="game-info__item-val">
+									<svg class="icon i-base i-base--green">
+										<use xlink:href="symbol/sprite.svg#plus-large"></use>
+									</svg>
+								</div>
+							</li>
+							<li class="game-info__list-item" >
+								<div class="game-info__item-title">Особенности игры</div>
+								<div class="game-info__item-val">
+									<svg class="icon i-base i-base--green">
+										<use xlink:href="symbol/sprite.svg#plus-large"></use>
+									</svg>
+								</div>
+							</li>
+							<li class="game-info__list-item" >
+								<div class="game-info__item-title">Минимальная ставка</div>
+								<div class="game-info__item-val">1</div>
+							</li>
+							<li class="game-info__list-item" >
+								<div class="game-info__item-title">Максимальная ставка</div>
+								<div class="game-info__item-val">1</div>
+							</li>
+							<li class="game-info__list-item" >
+								<div class="game-info__item-title">Дата выхода</div>
+								<div class="game-info__item-val">январь <br>2016</div>
+							</li>
+							<li class="game-info__list-item" >
+								<div class="game-info__item-title">Последнее обновление</div>
+								<div class="game-info__item-val">08.02.2021</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="game-bio__widget game-tags">
+						<header class="game-tags__header">
+							<h4 class="game-tags__title game-bio__widget-title">
+								<svg class="icon i-base i-base--sky">
+									<use xlink:href="symbol/sprite.svg#life"></use>
+								</svg>
+								Темы игры
+							</h4>
+						</header>
+						<div class="game-tags__list">
+							<a href="#" class="game-tags__button button-primary button-primary--pure">Египет</a>
+							<a href="#" class="game-tags__button button-primary button-primary--pure">5 барабанов</a>
+							<a href="#" class="game-tags__button button-primary button-primary--pure">Онлайн</a>
+							<a href="#" class="game-tags__button button-primary button-primary--pure">На деньги</a>
+						</div>
+					</div>
+				</div>
+				<div class="game-bio__main">
+					<header class="game-bio__header">
+						<h1 class="game-bio__title">Book of Dead</h1>
+						<p class="game-bio__description">
+							Попробуйте поиграть в игровой автомат Book of Dead совершенно бесплатно без каких-либо скачиваний и регистраций. Перед игрой в данный слот на реальные деньги обязательно прочитайте наш обзор.
+						</p>
+					</header>
+
+					<div class="game-bio__services game-service">
+						<div class="game-service__list">
+							<div class="game-service__item">
+								<div class="game-service__item-name">Процент выплат</div>
+								<div class="game-service__item-title">
+									<svg class="icon i-large i-large--sky">
+										<use xlink:href="symbol/sprite.svg#share"></use>
+									</svg>
+									<span>96.21%</span>
+								</div>
+							</div>
+							<div class="game-service__item">
+								<div class="game-service__item-name">Вид игры</div>
+								<div class="game-service__item-title">
+									<svg class="icon i-large i-large--sky">
+										<use xlink:href="symbol/sprite.svg#slot-machine"></use>
+									</svg>
+									<span>Игровые автоматы</span>
+								</div>
+							</div>
+							<div class="game-service__item">
+								<div class="game-service__item-name">Популярность</div>
+								<div class="game-service__item-title">
+									<svg class="icon i-large i-large--sky">
+										<use xlink:href="symbol/sprite.svg#fire"></use>
+									</svg>
+									<span>Очень <br>высокая</span>
+								</div>
+							</div>
+							<div class="game-service__item">
+								<div class="game-service__item-name">Провайдер</div>
+								<div class="game-service__item-title">
+									<svg class="icon i-large i-large--sky">
+										<use xlink:href="symbol/sprite.svg#hand"></use>
+									</svg>
+									<span>Play'n GO</span>
+								</div>
+							</div>
+							<div class="game-service__item">
+								<div class="game-service__item-name">Доступно на</div>
+								<div class="game-service__item-title">
+									<svg class="icon i-large i-large--sky">
+										<use xlink:href="symbol/sprite.svg#adaptative"></use>
+									</svg>
+									<span>Мобильные устройства, ПК</span>
+								</div>
+							</div>
+							<div class="game-service__item">
+								<div class="game-service__item-name">Выигрышные линии/Способы выиграть</div>
+								<div class="game-service__item-title">
+									<svg class="icon i-large i-large--sky">
+										<use xlink:href="symbol/sprite.svg#trophy"></use>
+									</svg>
+									<span>10</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="game-bio__rating game-rating">
+						<div class="game-rating__inner">
+							<div class="game-rating__total">
+								<svg class="icon">
+									<use xlink:href="symbol/sprite.svg#star-big"></use>
+								</svg>
+								<div class="game-rating__total-score">9.18</div>
+								<span class="game-rating__total-title">ОЦЕНКА GURU</span>
+							</div>
+							<div class="game-rating__content">
+								<h2 class="game-rating__title">Общий вердикт</h2>
+						
+								<div class="game-rating__text">
+									Этот слот неспроста завоевал популярность. В нем собрали все хорошее из классической игры и довели до блеска, так что каждая его деталь сияет как панцирь жука-скарабея.
+								</div>
+
+								<a href="#" class="game-rating__button button-primary button-primary--pure button-primary--icon">
+									Читать весь обзор
+									<svg class="icon icon--down">
+										<use xlink:href="symbol/sprite.svg#arrow-angel-next"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="game-bio__provider game-provider">
+						<h2 class="game-provider__title">О провайдере</h2>
+						<div class="game-provider__inner">
+							<div class="game-provider__logo">
+								<img src="images/game-provider.png" alt="">
+							</div>
+							<div class="game-provider__content">
+								<table class="game-provider__table">
+									<tbody>
+										<tr>
+											<td>Игры</td>
+											<td>203</td>
+										</tr>
+										<tr>
+											<td>Казино с играми на<br> реальные деньги</td>
+											<td>197</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="futured-games order-last">
+				<div class="futured-games__header">
+					<h2 class="futured-games__title">Еще игры от Play’n Go</h2>
+
+					<div class="futured-games__slider-controll">
+						<button class="button-slider-nav button-slider-nav--prev button">
+							<svg class="icon">
+								<use xlink:href="symbol/sprite.svg#arrow-angel-next"></use>
+							</svg>
+						</button>
+						<button class="button-slider-nav button-slider-nav--next button">
+							<svg class="icon">
+								<use xlink:href="symbol/sprite.svg#arrow-angel-next"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+
+				<div class="futured-games__slider">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+
+							
+								<div class="swiper-slide">
+									<a href="#" class="futured-card" onclick="return false">
+										<div class="futured-card__media">
+											<img src="images/demo/game-1.jpg" alt="">
+
+											<div class="futured-card__button">
+												<button class="button-play-small button"></button>
+												Играть бесплатно
+											</div>
+										</div>
+										<div class="futured-card__body">
+											<h3 class="futured-card__title">Court of Hearts</h3>
+											<span class="futured-card__subtitle">от Play’n Go</span>
+										</div>
+									</a>
+								</div>
+							
+								<div class="swiper-slide">
+									<a href="#" class="futured-card" onclick="return false">
+										<div class="futured-card__media">
+											<img src="images/demo/game-1.jpg" alt="">
+
+											<div class="futured-card__button">
+												<button class="button-play-small button"></button>
+												Играть бесплатно
+											</div>
+										</div>
+										<div class="futured-card__body">
+											<h3 class="futured-card__title">Court of Hearts</h3>
+											<span class="futured-card__subtitle">от Play’n Go</span>
+										</div>
+									</a>
+								</div>
+							
+								<div class="swiper-slide">
+									<a href="#" class="futured-card" onclick="return false">
+										<div class="futured-card__media">
+											<img src="images/demo/game-1.jpg" alt="">
+
+											<div class="futured-card__button">
+												<button class="button-play-small button"></button>
+												Играть бесплатно
+											</div>
+										</div>
+										<div class="futured-card__body">
+											<h3 class="futured-card__title">Court of Hearts</h3>
+											<span class="futured-card__subtitle">от Play’n Go</span>
+										</div>
+									</a>
+								</div>
+							
+								<div class="swiper-slide">
+									<a href="#" class="futured-card" onclick="return false">
+										<div class="futured-card__media">
+											<img src="images/demo/game-1.jpg" alt="">
+
+											<div class="futured-card__button">
+												<button class="button-play-small button"></button>
+												Играть бесплатно
+											</div>
+										</div>
+										<div class="futured-card__body">
+											<h3 class="futured-card__title">Court of Hearts</h3>
+											<span class="futured-card__subtitle">от Play’n Go</span>
+										</div>
+									</a>
+								</div>
+							
+								<div class="swiper-slide">
+									<a href="#" class="futured-card" onclick="return false">
+										<div class="futured-card__media">
+											<img src="images/demo/game-1.jpg" alt="">
+
+											<div class="futured-card__button">
+												<button class="button-play-small button"></button>
+												Играть бесплатно
+											</div>
+										</div>
+										<div class="futured-card__body">
+											<h3 class="futured-card__title">Court of Hearts</h3>
+											<span class="futured-card__subtitle">от Play’n Go</span>
+										</div>
+									</a>
+								</div>
+							
+						</div>
+					</div>
+				</div>
+				<div class="futured-games__slider-bullets"></div>
+			</div>
+
+			<div class="game-review-score order-last">
+				<h4 class="game-review-score__title">Рейтинг обзора</h4>
+				<div class="game-review-score__stars">
+					<svg class="icon i-large i-large--sky">
+						<use xlink:href="symbol/sprite.svg#star"></use>
+					</svg>
+					<svg class="icon i-large i-large--sky">
+						<use xlink:href="symbol/sprite.svg#star"></use>
+					</svg>
+					<svg class="icon i-large i-large--sky">
+						<use xlink:href="symbol/sprite.svg#star"></use>
+					</svg>
+					<svg class="icon i-large i-large--sky">
+						<use xlink:href="symbol/sprite.svg#star"></use>
+					</svg>
+					<svg class="icon i-large i-large--sky">
+						<use xlink:href="symbol/sprite.svg#star"></use>
+					</svg>
+				</div>
+				<span class="game-review-score__total"><span>4</span>/5</span>
+			</div>
+
+			<section class="section section-reviews order-last">
+	<header class="section__header">
+		<h2 class="section__title">Отзывы</h2>
+	</header>
+
+	<div class="section__body">
+
+		<div class="review-cards js-review-cards">
+			<div class="review-cards__main">
+				
+					<div class="review-card">
+						<div class="review-card__inner">
+							<header class="review-card__header">
+								<div class="review-card__user">
+									<div class="review-card__avatar">
+										<img src="images/demo/user-3.jpg" alt="">
+									</div>
+									<div class="review-card__user-data">
+										<div class="review-card__name">Jane Cooper</div>
+										<div class="review-card__date">8.10.2020</div>
+									</div>
+								</div>
+
+								<div class="review-card__rating">
+									<div class="review-card__stars">
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="review-card__rating-total">4,5</div>
+								</div>
+							</header>
+
+							<div class="review-card__body">
+								<div class="review-card__text">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas vitae fugiat dolor natus aliquam optio eligendi enim atque deleniti veniam molestiae, similique minus! Culpa impedit debitis nisi rem modi asperiores aperiam quam. Nostrum itaque eligendi, neque distinctio doloremque totam. Vitae odio sunt dicta, culpa minima numquam commodi provident voluptatibus, vel aperiam expedita, quae fugiat beatae? Deleniti labore quam quis, porro, placeat laudantium mollitia adipisci qui consectetur odit ad nobis aperiam ab voluptas quia veritatis blanditiis, error sed temporibus voluptatum incidunt vel vitae nihil? Tempora repudiandae ea minus nam, sit ad et nesciunt natus saepe error. Rerum tempora possimus illo minima.
+								</div>
+							</div>
+						</div>
+					</div>
+				
+					<div class="review-card">
+						<div class="review-card__inner">
+							<header class="review-card__header">
+								<div class="review-card__user">
+									<div class="review-card__avatar">
+										<img src="images/demo/user-3.jpg" alt="">
+									</div>
+									<div class="review-card__user-data">
+										<div class="review-card__name">Jane Cooper</div>
+										<div class="review-card__date">8.10.2020</div>
+									</div>
+								</div>
+
+								<div class="review-card__rating">
+									<div class="review-card__stars">
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="review-card__rating-total">4,5</div>
+								</div>
+							</header>
+
+							<div class="review-card__body">
+								<div class="review-card__text">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas vitae fugiat dolor natus aliquam optio eligendi enim atque deleniti veniam molestiae, similique minus! Culpa impedit debitis nisi rem modi asperiores aperiam quam. Nostrum itaque eligendi, neque distinctio doloremque totam. Vitae odio sunt dicta, culpa minima numquam commodi provident voluptatibus, vel aperiam expedita, quae fugiat beatae? Deleniti labore quam quis, porro, placeat laudantium mollitia adipisci qui consectetur odit ad nobis aperiam ab voluptas quia veritatis blanditiis, error sed temporibus voluptatum incidunt vel vitae nihil? Tempora repudiandae ea minus nam, sit ad et nesciunt natus saepe error. Rerum tempora possimus illo minima.
+								</div>
+							</div>
+						</div>
+					</div>
+				
+					<div class="review-card">
+						<div class="review-card__inner">
+							<header class="review-card__header">
+								<div class="review-card__user">
+									<div class="review-card__avatar">
+										<img src="images/demo/user-3.jpg" alt="">
+									</div>
+									<div class="review-card__user-data">
+										<div class="review-card__name">Jane Cooper</div>
+										<div class="review-card__date">8.10.2020</div>
+									</div>
+								</div>
+
+								<div class="review-card__rating">
+									<div class="review-card__stars">
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="review-card__rating-total">4,5</div>
+								</div>
+							</header>
+
+							<div class="review-card__body">
+								<div class="review-card__text">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas vitae fugiat dolor natus aliquam optio eligendi enim atque deleniti veniam molestiae, similique minus! Culpa impedit debitis nisi rem modi asperiores aperiam quam. Nostrum itaque eligendi, neque distinctio doloremque totam. Vitae odio sunt dicta, culpa minima numquam commodi provident voluptatibus, vel aperiam expedita, quae fugiat beatae? Deleniti labore quam quis, porro, placeat laudantium mollitia adipisci qui consectetur odit ad nobis aperiam ab voluptas quia veritatis blanditiis, error sed temporibus voluptatum incidunt vel vitae nihil? Tempora repudiandae ea minus nam, sit ad et nesciunt natus saepe error. Rerum tempora possimus illo minima.
+								</div>
+							</div>
+						</div>
+					</div>
+				
+					<div class="review-card">
+						<div class="review-card__inner">
+							<header class="review-card__header">
+								<div class="review-card__user">
+									<div class="review-card__avatar">
+										<img src="images/demo/user-3.jpg" alt="">
+									</div>
+									<div class="review-card__user-data">
+										<div class="review-card__name">Jane Cooper</div>
+										<div class="review-card__date">8.10.2020</div>
+									</div>
+								</div>
+
+								<div class="review-card__rating">
+									<div class="review-card__stars">
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="review-card__rating-total">4,5</div>
+								</div>
+							</header>
+
+							<div class="review-card__body">
+								<div class="review-card__text">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas vitae fugiat dolor natus aliquam optio eligendi enim atque deleniti veniam molestiae, similique minus! Culpa impedit debitis nisi rem modi asperiores aperiam quam. Nostrum itaque eligendi, neque distinctio doloremque totam. Vitae odio sunt dicta, culpa minima numquam commodi provident voluptatibus, vel aperiam expedita, quae fugiat beatae? Deleniti labore quam quis, porro, placeat laudantium mollitia adipisci qui consectetur odit ad nobis aperiam ab voluptas quia veritatis blanditiis, error sed temporibus voluptatum incidunt vel vitae nihil? Tempora repudiandae ea minus nam, sit ad et nesciunt natus saepe error. Rerum tempora possimus illo minima.
+								</div>
+							</div>
+						</div>
+					</div>
+				
+			</div>
+
+			<div class="review-cards__collapsed">
+				
+					<div class="review-card">
+						<div class="review-card__inner">
+							<header class="review-card__header">
+								<div class="review-card__user">
+									<div class="review-card__avatar">
+										<img src="images/demo/user-3.jpg" alt="">
+									</div>
+									<div class="review-card__user-data">
+										<div class="review-card__name">Jane Cooper</div>
+										<div class="review-card__date">8.10.2020</div>
+									</div>
+								</div>
+
+								<div class="review-card__rating">
+									<div class="review-card__stars">
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="review-card__rating-total">4,5</div>
+								</div>
+							</header>
+
+							<div class="review-card__body">
+								<div class="review-card__text">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas vitae fugiat dolor natus aliquam optio eligendi enim atque deleniti veniam molestiae, similique minus! Culpa impedit debitis nisi rem modi asperiores aperiam quam. Nostrum itaque eligendi, neque distinctio doloremque totam. Vitae odio sunt dicta, culpa minima numquam commodi provident voluptatibus, vel aperiam expedita, quae fugiat beatae? Deleniti labore quam quis, porro, placeat laudantium mollitia adipisci qui consectetur odit ad nobis aperiam ab voluptas quia veritatis blanditiis, error sed temporibus voluptatum incidunt vel vitae nihil? Tempora repudiandae ea minus nam, sit ad et nesciunt natus saepe error. Rerum tempora possimus illo minima.
+								</div>
+							</div>
+						</div>
+					</div>
+				
+					<div class="review-card">
+						<div class="review-card__inner">
+							<header class="review-card__header">
+								<div class="review-card__user">
+									<div class="review-card__avatar">
+										<img src="images/demo/user-3.jpg" alt="">
+									</div>
+									<div class="review-card__user-data">
+										<div class="review-card__name">Jane Cooper</div>
+										<div class="review-card__date">8.10.2020</div>
+									</div>
+								</div>
+
+								<div class="review-card__rating">
+									<div class="review-card__stars">
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="review-card__rating-total">4,5</div>
+								</div>
+							</header>
+
+							<div class="review-card__body">
+								<div class="review-card__text">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas vitae fugiat dolor natus aliquam optio eligendi enim atque deleniti veniam molestiae, similique minus! Culpa impedit debitis nisi rem modi asperiores aperiam quam. Nostrum itaque eligendi, neque distinctio doloremque totam. Vitae odio sunt dicta, culpa minima numquam commodi provident voluptatibus, vel aperiam expedita, quae fugiat beatae? Deleniti labore quam quis, porro, placeat laudantium mollitia adipisci qui consectetur odit ad nobis aperiam ab voluptas quia veritatis blanditiis, error sed temporibus voluptatum incidunt vel vitae nihil? Tempora repudiandae ea minus nam, sit ad et nesciunt natus saepe error. Rerum tempora possimus illo minima.
+								</div>
+							</div>
+						</div>
+					</div>
+				
+					<div class="review-card">
+						<div class="review-card__inner">
+							<header class="review-card__header">
+								<div class="review-card__user">
+									<div class="review-card__avatar">
+										<img src="images/demo/user-3.jpg" alt="">
+									</div>
+									<div class="review-card__user-data">
+										<div class="review-card__name">Jane Cooper</div>
+										<div class="review-card__date">8.10.2020</div>
+									</div>
+								</div>
+
+								<div class="review-card__rating">
+									<div class="review-card__stars">
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="review-card__rating-total">4,5</div>
+								</div>
+							</header>
+
+							<div class="review-card__body">
+								<div class="review-card__text">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas vitae fugiat dolor natus aliquam optio eligendi enim atque deleniti veniam molestiae, similique minus! Culpa impedit debitis nisi rem modi asperiores aperiam quam. Nostrum itaque eligendi, neque distinctio doloremque totam. Vitae odio sunt dicta, culpa minima numquam commodi provident voluptatibus, vel aperiam expedita, quae fugiat beatae? Deleniti labore quam quis, porro, placeat laudantium mollitia adipisci qui consectetur odit ad nobis aperiam ab voluptas quia veritatis blanditiis, error sed temporibus voluptatum incidunt vel vitae nihil? Tempora repudiandae ea minus nam, sit ad et nesciunt natus saepe error. Rerum tempora possimus illo minima.
+								</div>
+							</div>
+						</div>
+					</div>
+				
+					<div class="review-card">
+						<div class="review-card__inner">
+							<header class="review-card__header">
+								<div class="review-card__user">
+									<div class="review-card__avatar">
+										<img src="images/demo/user-3.jpg" alt="">
+									</div>
+									<div class="review-card__user-data">
+										<div class="review-card__name">Jane Cooper</div>
+										<div class="review-card__date">8.10.2020</div>
+									</div>
+								</div>
+
+								<div class="review-card__rating">
+									<div class="review-card__stars">
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon i-base i-base--sky">
+											<use xlink:href="symbol/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="review-card__rating-total">4,5</div>
+								</div>
+							</header>
+
+							<div class="review-card__body">
+								<div class="review-card__text">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas vitae fugiat dolor natus aliquam optio eligendi enim atque deleniti veniam molestiae, similique minus! Culpa impedit debitis nisi rem modi asperiores aperiam quam. Nostrum itaque eligendi, neque distinctio doloremque totam. Vitae odio sunt dicta, culpa minima numquam commodi provident voluptatibus, vel aperiam expedita, quae fugiat beatae? Deleniti labore quam quis, porro, placeat laudantium mollitia adipisci qui consectetur odit ad nobis aperiam ab voluptas quia veritatis blanditiis, error sed temporibus voluptatum incidunt vel vitae nihil? Tempora repudiandae ea minus nam, sit ad et nesciunt natus saepe error. Rerum tempora possimus illo minima.
+								</div>
+							</div>
+						</div>
+					</div>
+				
+			</div>
+
+			<div class="review-cards__footer">
+				<button class="button-primary button-primary--pure button-primary--icon"
+					data-collapse-moretext="Показать все"
+					data-collapse-lesstext="Скрыть">
+					<span>Показать все</span>
+					<svg class="icon icon--right">
+						<use xlink:href="symbol/sprite.svg#arrow-angel-next"></use>
+					</svg>
+				</button>
+			</div>
+		</div>
+
+		<div class="review-form-block">
+			<div class="review-form-block__header">
+				<h4 class="review-form-block__title">Оставить свой отзыв</h4>
+			</div>
+
+			<div class="review-form-block__body">
+				<form class="review-form">
+					<div class="review-form__row">
+						<div class="review-form__group">
+							<input type="text" placeholder="Имя" class="review-form__input review-form__input--name">
+							<input type="text" placeholder="Ваш email" class="review-form__input review-form__input--email">
+						</div>
+					</div>
+					<div class="review-form__row">
+						<textarea class="review-form__text" placeholder="Напишите текст вашего отзыва"></textarea>
+					</div>
+
+					<div class="review-form__row">
+						<div class="review-form__rating">
+							<div class="review-form__stars">
+								<svg class="icon i-base i-base--sky i-stroke--sky">
+									<use xlink:href="symbol/sprite.svg#star"></use>
+								</svg>
+								<svg class="icon i-base i-stroke i-stroke--sky">
+									<use xlink:href="symbol/sprite.svg#star"></use>
+								</svg>
+								<svg class="icon i-base i-stroke i-stroke--sky">
+									<use xlink:href="symbol/sprite.svg#star"></use>
+								</svg>
+								<svg class="icon i-base i-stroke i-stroke--sky">
+									<use xlink:href="symbol/sprite.svg#star"></use>
+								</svg>
+								<svg class="icon i-base i-stroke i-stroke--sky">
+									<use xlink:href="symbol/sprite.svg#star"></use>
+								</svg>
+							</div>
+
+							<div class="review-form__rating-total">
+								<span>1/</span>10
+							</div>
+						</div>
+					</div>
+
+					<div class="review-form__row">
+
+						<button class="review-form__submit button-primary">Отправить</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+	</div>
+</section>
+
+		</main>
+		<aside class="page-content__aside">
+
+			<div class="widget widget-banner">
+	<div class="widget-banner__inner">
+		<img src="images/demo/widget-banner-1.jpg" alt="">
+		<button class="button-primary button-primary--large">Кнопка</button>
+	</div>
+</div>
+			<div class="site-widget widget">
+	<header class="site-widget__header">
+		<h3 class="site-widget__title">Предложение месяца</h3>
+		<!-- <div class="site-widget__subtitle"></div> -->
+	</header>
+	<div class="site-widget__body">
+		<div class="promo-banner" style="background-image: url('images/demo/banner-promo.jpg');">
+			<div class="promo-banner__inner">
+				<a href="#" class="button-primary button-primary--base button-primary--gradient">Забрать</a>
+				<a href="#" class="button-primary button-primary--base button-primary--pure">Читать</a>
+			</div>
+		</div>
+
+		<div class="promo-banner" style="background-image: url('images/demo/banner-promo.jpg');">
+			<div class="promo-banner__inner">
+				<a href="#" class="button-primary button-primary--base button-primary--gradient">Забрать</a>
+				<a href="#" class="button-primary button-primary--base button-primary--pure">Читать</a>
+			</div>
+		</div>
+
+		<div class="promo-banner" style="background-image: url('images/demo/banner-promo.jpg');">
+			<div class="promo-banner__inner">
+				<a href="#" class="button-primary button-primary--base button-primary--gradient">Забрать</a>
+				<a href="#" class="button-primary button-primary--base button-primary--pure">Читать</a>
+			</div>
+		</div>
+
+		<div class="promo-banner" style="background-image: url('images/demo/banner-promo.jpg');">
+			<div class="promo-banner__inner">
+				<a href="#" class="button-primary button-primary--base button-primary--gradient">Забрать</a>
+				<a href="#" class="button-primary button-primary--base button-primary--pure">Читать</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+		</aside>
+	</div>
+
+	<div class="background-gradients">
+		<div class="background-gradients__item background-gradients__item--big"></div>
+		<div class="background-gradients__item background-gradients__item--small"></div>
+	</div>
+
+
+			
+			</div><!-- site__body -->
+
+		<footer class="footer hidden">
+			<div class="container">
+				<div class="footer__widgets footer-widgets">
+					<div class="footer-widgets__row">
+						<div class="footer-widgets__col footer-widgets__col-4">
+							<div class="widget-footer widget-nav">
+								<h3 class="widget-footer__title">Гид по азартным играм</h3>
+								<ul class="widget-nav__list">
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#wheel-of-fortune"></use></svg>
+											Как выбрать онлайн-казино
+										</a> 
+									</li>
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#ace-of-spades"></use></svg>
+											Как играть в азартные игры: процент выплат и дисперсия
+										</a> 
+									</li>
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#diamond"></use></svg>
+											Бонусы
+										</a> 
+									</li>
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#sword"></use></svg>
+											Кодекс честной игры
+										</a> 
+									</li>
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#shake-hand"></use></svg>
+											Ответственная игра и помощь при игровой зависимости
+										</a> 
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer-widgets__col footer-widgets__col-3">
+							<div class="widget-footer widget-nav">
+								<h3 class="widget-footer__title">Гид по играм</h3>
+								<ul class="widget-nav__list">
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#777"></use></svg>
+											Игровые автоматы (слоты)
+										</a> 
+									</li>
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#roulette"></use></svg>
+											Рулетка
+										</a> 
+									</li>
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#poker-cards"></use></svg>
+											Блэкджек
+										</a> 
+									</li>
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#play"></use></svg>
+											Как играть в видеопокер
+										</a> 
+									</li>
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#conversation"></use></svg>
+											Баккара - правила, стратегии, руководство
+										</a> 
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer-widgets__col footer-widgets__col-3">
+							<div class="widget-footer widget-nav">
+								<h3 class="widget-footer__title">Казино Гуру </h3>
+								<ul class="widget-nav__list">
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#slot-machine"></use></svg>
+											Онлайн-казино
+										</a> 
+									</li>
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#dice"></use></svg>
+											Игры
+										</a> 
+									</li>
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#diamond"></use></svg>
+											Бонусы
+										</a> 
+									</li>
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#fencing"></use></svg>
+											Жалобы
+										</a> 
+									</li>
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#cherry"></use></svg>
+											Форум
+										</a> 
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer-widgets__col footer-widgets__col-2">
+							<div class="widget-footer widget-nav">
+								<h3 class="widget-footer__title">О нас</h3>
+								<ul class="widget-nav__list">
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#domino"></use></svg>
+											О нас
+										</a> 
+									</li>
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#return-to-the-past"></use></svg>
+											История
+										</a> 
+									</li>
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#heart"></use></svg>
+											Команда
+										</a> 
+									</li>
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#contact"></use></svg>
+											Контакты
+										</a> 
+									</li>
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#shake-hand"></use></svg>
+											Условия пользования
+										</a> 
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__banners footer-banners">
+
+					<h3 class="footer-banners__title">Играйте ответственно и в меру</h3>
+
+					<div class="footer-banners__item-list">
+						<div class="footer-banners__item">
+							<img class="lazy-image" data-src="images/footer-banner-1.jpg" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+						</div>
+						<div class="footer-banners__item">
+							<img class="lazy-image" data-src="images/footer-banner-2.jpg" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+						</div>
+						<div class="footer-banners__item">
+							<img class="lazy-image" data-src="images/footer-banner-3.png" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+						</div>
+						<div class="footer-banners__item">
+							<img class="lazy-image" data-src="images/footer-banner-4.png" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+						</div>
+						<div class="footer-banners__item">
+							<img class="lazy-image" data-src="images/footer-banner-5.jpg" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+						</div>
+						<div class="footer-banners__item">
+							<img class="lazy-image" data-src="images/footer-banner-6.png" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+						</div>
+					</div>
+				</div>
+				<div class="footer__info footer-info">
+					<div class="footer-info__inner">
+						<a href="/" class="logo footer-info__logo"><img src="images/logo.png" alt="Footer Logo" width="123"></a>
+						<div class="footer-info__text">
+							Slototop является независимым ресурсом об онлайн-казино и азартных играх, который не контролируется каким-либо оператором азартных игр или другим учреждением. Мы честно создаем наши обзоры и руководства, опираясь только на собственные знания и мнение наших независимых экспертов; однако все это создано лишь в информационных целях и не должно восприниматься как рекомендации. Прежде чем играть в том или ином казино, убедитесь, что вы действуете в соответствии с нормативными требованиями.
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom footer-bottom">
+					<div class="footer-bottom__inner">
+						<div class="footer-bottom__social">
+							<div class="socialmedia">
+	<div class="socialmedia__inner">
+		<a href="#" class="socialmedia__button social-button">
+			<svg class="social-button__icon">
+				<use xlink:href="symbol/sprite.svg#telegram"></use>
+			</svg>
+		</a>
+		<a href="#" class="socialmedia__button social-button">
+			<svg class="social-button__icon">
+				<use xlink:href="symbol/sprite.svg#youtube"></use>
+			</svg>
+		</a>
+		<a href="#" class="socialmedia__button social-button">
+			<svg class="social-button__icon">
+				<use xlink:href="symbol/sprite.svg#twitter"></use>
+			</svg>
+		</a>
+		<a href="#" class="socialmedia__button social-button">
+			<svg class="social-button__icon">
+				<use xlink:href="symbol/sprite.svg#instagram"></use>
+			</svg>
+		</a>
+		<a href="#" class="socialmedia__button social-button">
+			<svg class="social-button__icon">
+				<use xlink:href="symbol/sprite.svg#pinterest"></use>
+			</svg>
+		</a>
+		<a href="#" class="socialmedia__button social-button">
+			<svg class="social-button__icon">
+				<use xlink:href="symbol/sprite.svg#facebook"></use>
+			</svg>
+		</a>
+	</div>
+</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div><!-- site -->
+
+	
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/vendor.js"></script>
+	<script src="js/index.js"></script>
+	</body>
+
+</html>

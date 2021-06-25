@@ -1,0 +1,591 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>Bloss</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<!--== Preload Fonts -->
+	<link rel="preload" href="fonts/MullerRegular.woff2" as="font" type="font/woff" crossorigin="">
+	<link rel="preload" href="fonts/MullerMedium.woff2" as="font" type="font/woff" crossorigin="">
+	<link rel="preload" href="fonts/MullerBold.woff2" as="font" type="font/woff" crossorigin="">
+
+	<!--== favicon  -->
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/site.webmanifest">
+	<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#264066">
+	<meta name="msapplication-TileColor" content="#ffc40d">
+	<meta name="theme-color" content="#ffffff">
+
+	<link rel="stylesheet" href="css/vendor.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+
+<body class="body" id="body">
+	<div class="site">
+		<div class="site-overlay"></div>
+
+		<div class="header-mobile">
+			<div class="container">
+				<a href="/" class="logo header-mobile__logo"><img src="images/logo.png" alt="Header Mobile Logo" width="123"></a>
+
+				<button class="hamburger hamburger--squeeze" type="button">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+				</button>
+			</div>
+		</div>
+
+		<div class="offcanvas-search">
+			<div class="container">
+				<div class="offcanvas-search__inner">
+					<form class="offcanvas-search-form">
+						<input type="text" class="offcanvas-search-form__input" placeholder="Search word...">
+						<button type="submit" class="offcanvas-search-form__submit button-primary">
+							<svg class="icon i-base">
+								<use xlink:href="symbol/sprite.svg#search"></use>
+							</svg>
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<header class="header">
+			<div class="header__inner container">
+
+				<div class="header__logo">
+					<a href="/" class="logo">
+						<img src="images/logo.png" alt="Header Logo" width="123">
+					</a>
+				</div>
+				
+				<nav class="header-nav header__nav">
+					<ul class="main-menu">
+						<li class="">
+							<a href="#">
+								<svg><use xlink:href="symbol/sprite.svg#slot-machine"></use></svg>
+								Онлайн-казино
+								<button class="icon-arrow button">
+									<svg><use xlink:href="symbol/sprite.svg#arrow-angel-next"></use></svg>
+								</button>
+							</a>
+
+							<div class="sub-menu megamenu">
+								<div class="megamenu__mobile">
+									<button class="button megamenu__close-submenu">
+										<svg class="icon i-base">
+											<use xlink:href="symbol/sprite.svg#arrow-angel-next"></use>
+										</svg>
+									</button>
+								</div>
+								<div class="megamenu__row">
+									<div class="megamenu__col megamenu__col-3">
+										<h3 class="megamenu__col-title">Онлайн-казино</h3>
+										<ul class="megamenu__list">
+											<li class="active"><a href="#">Топ онлайн-казино</a></li>
+											<li><a href="#">Недавно открытые казино</a></li>
+											<li><a href="#">Известные бренды</a></li>
+											<li><a href="#">Все казино</a></li>
+										</ul>
+									</div>
+									<div class="megamenu__col megamenu__col-3">
+										<h3 class="megamenu__col-title">Популярные фильтры</h3>
+										<ul class="megamenu__list">
+											<li><a href="#">Казино с мобильной версией</a></li>
+											<li><a href="#">Биткоин/крипто казино</a></li>
+											<li><a href="#">Казино с live-рулеткой</a></li>
+											<li><a href="#">Казино для хайроллеров</a></li>
+											<li><a href="#">Анонимные казино</a></li>
+										</ul>
+									</div>
+									<div class="megamenu__col megamenu__col-3">
+										<h3 class="megamenu__col-title">Казино по методу оплаты</h3>
+										<ul class="megamenu__list">
+											<li><a href="#">Mastercard казино</a></li>
+											<li><a href="#">VISA казино</a></li>
+											<li><a href="#">QiWi казино</a></li>
+											<li><a href="#">Приват24 казино</a></li>
+											<li><a href="#">Neteller казино</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="#">
+								<svg><use xlink:href="symbol/sprite.svg#dice"></use></svg>
+								Игры
+								<button class="icon-arrow button">
+									<svg><use xlink:href="symbol/sprite.svg#arrow-angel-next"></use></svg>
+								</button>
+							</a>
+
+							<div class="sub-menu megamenu">
+								<div class="megamenu__mobile">
+									<button class="button megamenu__close-submenu">
+										<svg class="icon i-base">
+											<use xlink:href="symbol/sprite.svg#arrow-angel-next"></use>
+										</svg>
+									</button>
+								</div>
+								<div class="megamenu__row">
+									<div class="megamenu__col megamenu__col-3">
+										<h3 class="megamenu__col-title">Онлайн-казино 2</h3>
+										<ul class="megamenu__list">
+											<li class="active"><a href="#">Топ онлайн-казино</a></li>
+											<li><a href="#">Недавно открытые казино</a></li>
+											<li><a href="#">Известные бренды</a></li>
+											<li><a href="#">Все казино</a></li>
+										</ul>
+									</div>
+									<div class="megamenu__col megamenu__col-3">
+										<h3 class="megamenu__col-title">Популярные фильтры</h3>
+										<ul class="megamenu__list">
+											<li><a href="#">Казино с мобильной версией</a></li>
+											<li><a href="#">Биткоин/крипто казино</a></li>
+											<li><a href="#">Казино с live-рулеткой</a></li>
+											<li><a href="#">Казино для хайроллеров</a></li>
+											<li><a href="#">Анонимные казино</a></li>
+										</ul>
+									</div>
+									<div class="megamenu__col megamenu__col-3">
+										<h3 class="megamenu__col-title">Казино по методу оплаты</h3>
+										<ul class="megamenu__list">
+											<li><a href="#">Mastercard казино</a></li>
+											<li><a href="#">VISA казино</a></li>
+											<li><a href="#">QiWi казино</a></li>
+											<li><a href="#">Приват24 казино</a></li>
+											<li><a href="#">Neteller казино</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="#">
+								<svg><use xlink:href="symbol/sprite.svg#diamond"></use></svg>
+								Бонусы
+								<button class="icon-arrow button">
+									<svg><use xlink:href="symbol/sprite.svg#arrow-angel-next"></use></svg>
+								</button>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<svg><use xlink:href="symbol/sprite.svg#cherry"></use></svg>
+								Блог
+								<button class="icon-arrow button">
+									<svg><use xlink:href="symbol/sprite.svg#arrow-angel-next"></use></svg>
+								</button>
+							</a>
+						</li>
+					</ul>
+				</nav>
+
+				<div class="header__authorization">
+					<a href="#" class="button-primary button-primary--small">Войти</a>
+					<a href="#" class="button-primary button-primary--small button-primary--dark">Регистрация</a>
+				</div>
+
+				<div class="header__controll">
+					<button class="button button-search js-offcanvas-search-button">
+						<svg class="icon">
+							<use xlink:href="symbol/sprite.svg#search"></use>
+						</svg>
+					</button>
+
+					<div class="language js-lang-switch">
+						<div class="language__header">RU</div>
+						<div class="language__dropdown">
+							<span>UA</span>
+							<span>EN</span>
+						</div>
+					</div>
+				</div>
+
+				<button class="button header__close-button"></button>
+			</div>
+		</header>
+
+			<div class="site__body">
+		
+
+
+
+	<div class="breadcrumbs">
+	<nav class="breadcrumbs__nav">
+
+		<a class="breadcrumbs__item" href="/">
+			<svg class="icon i-base i-base--sky">
+				<use xlink:href="symbol/sprite.svg#home"></use>
+			</svg>
+			Главная
+		</a>
+		<span class="breadcrumbs__separator">/</span>
+		<span class="breadcrumbs__item breadcrumbs__item--current">
+			<svg class="icon i-base i-base--sky">
+				<use xlink:href="symbol/sprite.svg#777"></use>
+			</svg>
+
+			Топ-казино	
+			
+		</span>
+	</nav>
+</div>
+
+	<div class="page-content page-casino">
+		<main class="page-content__main">
+
+			<article class="page-article">
+				<header class="page-article__header">
+					<h1 class="page-article__title">Lorem ipsum dolor sit amet consectetur.</h1>
+
+					<div class="page-article__image">
+						<img src="images/demo/casino-1.jpg" alt="">
+					</div>
+
+					<div class="page-article__meta article-meta">
+						<div class="article-meta__item">
+							<svg class="icon i-base i-base--sky">
+								<use xlink:href="symbol/sprite.svg#folder"></use>
+							</svg>
+							<span>Uncategorized, Blog</span>
+						</div>
+
+						<div class="article-meta__item">
+							<svg class="icon i-base i-base--sky">
+								<use xlink:href="symbol/sprite.svg#calendar"></use>
+							</svg>
+							<span>12 мая, 2021</span>
+						</div>
+					</div>
+				</header>
+
+				<div class="page-article__content typography">
+
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis alias beatae, quas repellat magnam corporis quos blanditiis sequi a consequuntur nostrum ipsam repellendus explicabo, iste culpa necessitatibus officia non. Excepturi tempora sed amet earum error pariatur veritatis voluptatum neque quia distinctio. Ullam aut magnam dolorem rerum cupiditate suscipit temporibus ratione labore quas ipsa facere voluptate ipsum, eveniet neque! Veritatis placeat ullam quaerat architecto animi saepe repellendus incidunt, magni harum recusandae deleniti voluptatibus consequatur officiis eaque ipsum beatae, veniam ipsa temporibus, minus ut! Id eveniet distinctio vitae ab tempore praesentium ducimus non voluptatum, corporis tenetur provident deserunt laboriosam nulla porro. Veritatis cumque debitis, quod eaque eum impedit in facere a molestias iure! Tempore veniam quas, quisquam dolore magnam explicabo modi, sunt tempora exercitationem facilis dolorum optio magni harum odio quaerat repellendus fuga nostrum consequuntur ratione eum perspiciatis laudantium? Soluta ipsam ea, totam obcaecati labore aliquam magni quos. Iure animi dolore, voluptatum facere et unde maxime rerum ex, dolores exercitationem nisi. Eligendi, magnam atque quia iusto vel laborum fugiat ratione, expedita autem dignissimos illum sed porro. Debitis dolorem veniam, aspernatur reprehenderit doloribus nihil repellendus quas aliquid porro adipisci aut, in incidunt vel accusamus beatae. Illo nihil mollitia eveniet earum, quia temporibus. Enim.</p>
+
+					<h3>Lorem ipsum dolor sit.</h3>
+
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere unde voluptate saepe ad aliquid possimus! Repellat voluptatum illo voluptates? Libero animi repudiandae similique. Reiciendis qui debitis voluptatibus cupiditate officia, deleniti sint accusamus impedit quas, quibusdam fugit ad dolores cum veniam recusandae explicabo iure! Quasi, quaerat! Quis, doloribus unde distinctio, dignissimos harum aliquam amet officiis omnis velit itaque sit maiores qui officia similique esse. Neque corporis similique eum officia facilis cum quibusdam recusandae eaque labore, excepturi dolores ipsam possimus placeat qui aperiam consequatur ducimus deserunt laborum hic doloremque rerum natus omnis. Quo, similique cumque! Possimus in odio dolorum consectetur temporibus sapiente.</p>
+				</div>
+
+				<div class="page-article__author author-block">
+					<div class="author-block__inner">
+						<div class="author-block__avatar">
+							<img src="images/demo/user-3.jpg" alt="">
+						</div>
+						<div class="author-block__content">
+							<div class="author-block__name">Автор: Jane Cooper</div>
+							<div class="author-block__date">Последнее обновление 18.10.2020</div>
+						</div>
+					</div>
+				</div>
+			</article>
+
+		</main>
+		<aside class="page-content__aside">
+
+			<div class="widget widget-banner">
+	<div class="widget-banner__inner">
+		<img src="images/demo/widget-banner-1.jpg" alt="">
+		<button class="button-primary button-primary--large">Кнопка</button>
+	</div>
+</div>
+			<div class="site-widget widget">
+	<header class="site-widget__header">
+		<h3 class="site-widget__title">Предложение месяца</h3>
+		<!-- <div class="site-widget__subtitle"></div> -->
+	</header>
+	<div class="site-widget__body">
+		<div class="promo-banner" style="background-image: url('images/demo/banner-promo.jpg');">
+			<div class="promo-banner__inner">
+				<a href="#" class="button-primary button-primary--base button-primary--gradient">Забрать</a>
+				<a href="#" class="button-primary button-primary--base button-primary--pure">Читать</a>
+			</div>
+		</div>
+
+		<div class="promo-banner" style="background-image: url('images/demo/banner-promo.jpg');">
+			<div class="promo-banner__inner">
+				<a href="#" class="button-primary button-primary--base button-primary--gradient">Забрать</a>
+				<a href="#" class="button-primary button-primary--base button-primary--pure">Читать</a>
+			</div>
+		</div>
+
+		<div class="promo-banner" style="background-image: url('images/demo/banner-promo.jpg');">
+			<div class="promo-banner__inner">
+				<a href="#" class="button-primary button-primary--base button-primary--gradient">Забрать</a>
+				<a href="#" class="button-primary button-primary--base button-primary--pure">Читать</a>
+			</div>
+		</div>
+
+		<div class="promo-banner" style="background-image: url('images/demo/banner-promo.jpg');">
+			<div class="promo-banner__inner">
+				<a href="#" class="button-primary button-primary--base button-primary--gradient">Забрать</a>
+				<a href="#" class="button-primary button-primary--base button-primary--pure">Читать</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+		</aside>
+	</div>
+
+	<div class="background-gradients">
+		<div class="background-gradients__item background-gradients__item--big"></div>
+		<div class="background-gradients__item background-gradients__item--small"></div>
+	</div>
+
+
+			
+			</div><!-- site__body -->
+
+		<footer class="footer hidden">
+			<div class="container">
+				<div class="footer__widgets footer-widgets">
+					<div class="footer-widgets__row">
+						<div class="footer-widgets__col footer-widgets__col-4">
+							<div class="widget-footer widget-nav">
+								<h3 class="widget-footer__title">Гид по азартным играм</h3>
+								<ul class="widget-nav__list">
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#wheel-of-fortune"></use></svg>
+											Как выбрать онлайн-казино
+										</a> 
+									</li>
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#ace-of-spades"></use></svg>
+											Как играть в азартные игры: процент выплат и дисперсия
+										</a> 
+									</li>
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#diamond"></use></svg>
+											Бонусы
+										</a> 
+									</li>
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#sword"></use></svg>
+											Кодекс честной игры
+										</a> 
+									</li>
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#shake-hand"></use></svg>
+											Ответственная игра и помощь при игровой зависимости
+										</a> 
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer-widgets__col footer-widgets__col-3">
+							<div class="widget-footer widget-nav">
+								<h3 class="widget-footer__title">Гид по играм</h3>
+								<ul class="widget-nav__list">
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#777"></use></svg>
+											Игровые автоматы (слоты)
+										</a> 
+									</li>
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#roulette"></use></svg>
+											Рулетка
+										</a> 
+									</li>
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#poker-cards"></use></svg>
+											Блэкджек
+										</a> 
+									</li>
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#play"></use></svg>
+											Как играть в видеопокер
+										</a> 
+									</li>
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#conversation"></use></svg>
+											Баккара - правила, стратегии, руководство
+										</a> 
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer-widgets__col footer-widgets__col-3">
+							<div class="widget-footer widget-nav">
+								<h3 class="widget-footer__title">Казино Гуру </h3>
+								<ul class="widget-nav__list">
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#slot-machine"></use></svg>
+											Онлайн-казино
+										</a> 
+									</li>
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#dice"></use></svg>
+											Игры
+										</a> 
+									</li>
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#diamond"></use></svg>
+											Бонусы
+										</a> 
+									</li>
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#fencing"></use></svg>
+											Жалобы
+										</a> 
+									</li>
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#cherry"></use></svg>
+											Форум
+										</a> 
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer-widgets__col footer-widgets__col-2">
+							<div class="widget-footer widget-nav">
+								<h3 class="widget-footer__title">О нас</h3>
+								<ul class="widget-nav__list">
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#domino"></use></svg>
+											О нас
+										</a> 
+									</li>
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#return-to-the-past"></use></svg>
+											История
+										</a> 
+									</li>
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#heart"></use></svg>
+											Команда
+										</a> 
+									</li>
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#contact"></use></svg>
+											Контакты
+										</a> 
+									</li>
+									<li>
+										<a href="#">
+											<svg><use xlink:href="symbol/sprite.svg#shake-hand"></use></svg>
+											Условия пользования
+										</a> 
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__banners footer-banners">
+
+					<h3 class="footer-banners__title">Играйте ответственно и в меру</h3>
+
+					<div class="footer-banners__item-list">
+						<div class="footer-banners__item">
+							<img class="lazy-image" data-src="images/footer-banner-1.jpg" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+						</div>
+						<div class="footer-banners__item">
+							<img class="lazy-image" data-src="images/footer-banner-2.jpg" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+						</div>
+						<div class="footer-banners__item">
+							<img class="lazy-image" data-src="images/footer-banner-3.png" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+						</div>
+						<div class="footer-banners__item">
+							<img class="lazy-image" data-src="images/footer-banner-4.png" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+						</div>
+						<div class="footer-banners__item">
+							<img class="lazy-image" data-src="images/footer-banner-5.jpg" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+						</div>
+						<div class="footer-banners__item">
+							<img class="lazy-image" data-src="images/footer-banner-6.png" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+						</div>
+					</div>
+				</div>
+				<div class="footer__info footer-info">
+					<div class="footer-info__inner">
+						<a href="/" class="logo footer-info__logo"><img src="images/logo.png" alt="Footer Logo" width="123"></a>
+						<div class="footer-info__text">
+							Slototop является независимым ресурсом об онлайн-казино и азартных играх, который не контролируется каким-либо оператором азартных игр или другим учреждением. Мы честно создаем наши обзоры и руководства, опираясь только на собственные знания и мнение наших независимых экспертов; однако все это создано лишь в информационных целях и не должно восприниматься как рекомендации. Прежде чем играть в том или ином казино, убедитесь, что вы действуете в соответствии с нормативными требованиями.
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom footer-bottom">
+					<div class="footer-bottom__inner">
+						<div class="footer-bottom__social">
+							<div class="socialmedia">
+	<div class="socialmedia__inner">
+		<a href="#" class="socialmedia__button social-button">
+			<svg class="social-button__icon">
+				<use xlink:href="symbol/sprite.svg#telegram"></use>
+			</svg>
+		</a>
+		<a href="#" class="socialmedia__button social-button">
+			<svg class="social-button__icon">
+				<use xlink:href="symbol/sprite.svg#youtube"></use>
+			</svg>
+		</a>
+		<a href="#" class="socialmedia__button social-button">
+			<svg class="social-button__icon">
+				<use xlink:href="symbol/sprite.svg#twitter"></use>
+			</svg>
+		</a>
+		<a href="#" class="socialmedia__button social-button">
+			<svg class="social-button__icon">
+				<use xlink:href="symbol/sprite.svg#instagram"></use>
+			</svg>
+		</a>
+		<a href="#" class="socialmedia__button social-button">
+			<svg class="social-button__icon">
+				<use xlink:href="symbol/sprite.svg#pinterest"></use>
+			</svg>
+		</a>
+		<a href="#" class="socialmedia__button social-button">
+			<svg class="social-button__icon">
+				<use xlink:href="symbol/sprite.svg#facebook"></use>
+			</svg>
+		</a>
+	</div>
+</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div><!-- site -->
+
+	
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/vendor.js"></script>
+	<script src="js/index.js"></script>
+	</body>
+
+</html>

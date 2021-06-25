@@ -11,14 +11,15 @@
 // ==================================================
 $hamburger-padding-x           : 15px !default;
 $hamburger-padding-y           : 15px !default;
-$hamburger-layer-width         : 41px !default;
-$hamburger-layer-height        : 4px !default;
+$hamburger-layer-width         : 28px !default;
+$hamburger-layer-height        : 2px !default;
 $hamburger-layer-spacing       : 6px !default;
-$hamburger-layer-color         : $colorBase !default;
+$hamburger-layer-color         : $colorSky !default;
 $hamburger-layer-border-radius : 6px !default;
 $hamburger-hover-opacity       : 1 !default;
-$hamburger-active-layer-color  : $colorBase !default;
+$hamburger-active-layer-color  : white !default;
 $hamburger-active-hover-opacity: $hamburger-hover-opacity !default;
+$hamburger-active-opacity: .5 !default;
 
 // To use CSS filters as the hover effect instead of opacity,
 // set $hamburger-hover-use-filter as true and
@@ -82,7 +83,7 @@ $hamburger-types: (
 // @import "types/arrowturn";
 // @import "types/arrowturn-r";
 // @import "types/boring";
-@import "types/collapse";
+// @import "types/collapse";
 // @import "types/collapse-r";
 // @import "types/elastic";
 // @import "types/elastic-r";
@@ -97,7 +98,7 @@ $hamburger-types: (
 // @import "types/spring-r";
 // @import "types/stand";
 // @import "types/stand-r";
-// @import "types/squeeze";
+@import "types/squeeze";
 // @import "types/vortex";
 // @import "types/vortex-r";
 

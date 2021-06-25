@@ -25,15 +25,25 @@
     @else {
       opacity: $hamburger-hover-opacity;
     }
+
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+
+      width: 100%;
+    }
   }
 
   &.is-active {
+
+    opacity: $hamburger-active-opacity;
+
     &:hover {
       @if $hamburger-hover-use-filter == true {
         filter: $hamburger-active-hover-filter;
       }
       @else {
         opacity: $hamburger-active-hover-opacity;
+        
       }
     }
 
@@ -41,6 +51,12 @@
     .hamburger-inner::before,
     .hamburger-inner::after {
       background-color: $hamburger-active-layer-color;
+    }
+
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+
+      width: 100%;
     }
   }
 }
@@ -68,12 +84,16 @@
     transition-property: transform;
     transition-duration: 0.4s;
     transition-timing-function: ease;
+
   }
 
   &::before,
   &::after {
     content: "";
     display: block;
+    
+    width: 80%;
+    right: 0;
   }
 
   &::before {

@@ -1,14 +1,25 @@
 jQuery(document).ready(function($){
 
+	// Modile
+	mobileMenu($);
+
 	//common
+	siteOverlayHiddingElements($);
+	fixedHeader($);
 	languageSwitcher($);
 	backgroundGradientsHandler($);
+	offcanvasSearchBar($);
 
 	// components
 	bannerSlider($);
-	currencySlider($);
+	cardSliders($);
 	cardBonusDropdown($);
 	accordionFAQ();
+	futuredSlider();
+
+	// Reviews
+	reviewCollapse($);
+	
 
 	// close outside 
 	document.addEventListener("click", function(event) {
@@ -23,6 +34,118 @@ jQuery(document).ready(function($){
 
 });
 
+// #START Helper Functions
+
+const bodyOverflow = ($) => {
+
+	let body = $('body');
+
+	if(!body.hasClass('overflow')) {
+
+		body.addClass('overflow');
+	} else {
+
+		body.removeClass('overflow');
+	}
+}
+
+const fakeScrollbar = ($) => {
+
+	let body = $('body');
+
+	if(body.hasClass('overflow')) {
+
+		body.css({
+			'margin-right': '17px',
+		});
+	} else {
+
+		body.css({
+			'margin-right': '0',
+		});
+	}
+}
+
+const siteOverlayToggle = ($) => {
+
+	let $overlay = $('.site-overlay');
+
+	if(!$overlay.hasClass('visible')) {
+
+		$overlay.addClass('visible');
+	} else {
+
+		$overlay.removeClass('visible');
+	}
+
+}
+
+const siteOverlayHiddingElements = ($) => {
+
+	let $overlay = $('.site-overlay');
+
+	// Close all elements by clicking on overlay element
+	$overlay.on('click', function(){
+
+		$(this).removeClass('visible');
+		$('.offcanvas-search').removeClass('visible');
+	});
+}
+// #END Helper Functions
+
+const mobileMenu = ($) => {
+
+	// Hamburger
+	$('.hamburger').on('click', function(){
+
+		bodyOverflow($);
+		siteOverlayToggle($);
+
+		$(this).toggleClass('active');
+		$('.header').addClass('is-active');
+
+		if(!$(this).hasClass('is-active')){
+			$('.megamenu__close-submenu').parents('li').removeClass('is-active');
+		}
+	});
+
+	// Close Menu
+	$('.header__close-button').on('click', function(){
+
+		bodyOverflow($);
+		siteOverlayToggle($);
+
+		$('.header').removeClass('is-active');	
+	});
+
+	// Mobile SubMenu
+	$('.main-menu .icon-arrow').on('click', function(e){
+		e.stopPropagation();
+		e.preventDefault();
+
+		$(this).parents('li').addClass('is-active');
+		
+	});
+
+	$('.megamenu__close-submenu').on('click', function(){
+
+		$(this).parents('li').removeClass('is-active');
+	});
+}
+
+const fixedHeader = ($) => {
+
+	$(window).on('scroll', function(){
+
+		if($(this).scrollTop() > 100) {
+
+			$('.header, .header-mobile').addClass('is-fixed');
+		} else {
+
+			$('.header, .header-mobile').removeClass('is-fixed');
+		}
+	}).scroll();
+}
 
 const languageSwitcher = ($) => {
 
@@ -43,6 +166,14 @@ const languageSwitcher = ($) => {
 }
 
 const backgroundGradientsHandler = ($) => {
+
+	if(!document.querySelector('.section-typography')) {
+
+		document.querySelector('.background-gradients__item--big').style.position = 'absolute';
+		document.querySelector('.background-gradients__item--small').style.position = 'absolute';
+
+		return;
+	}
 	
 
 	$(window).on('scroll', function(){
@@ -81,6 +212,16 @@ const backgroundGradientsHandler = ($) => {
 	}).scroll();
 }
 
+const offcanvasSearchBar = ($) => {
+
+	$('.js-offcanvas-search-button').on('click', function(){
+
+		siteOverlayToggle($);
+		$('.offcanvas-search').addClass('visible');
+		$('.offcanvas-search').find('input').focus();
+	});
+}
+
 const bannerSlider = ($) => {
 
 	let slider;
@@ -100,7 +241,7 @@ const bannerSlider = ($) => {
 	});
 };
 
-const currencySlider = ($) => {
+const cardSliders = ($) => {
 
 	flagsSlider();
 	depositSlider();
@@ -238,6 +379,16 @@ const currencySlider = ($) => {
 		});
 	});
 
+	//Enable Autoplay
+	if($('.props-slider').attr('data-swiper-autoplay')){
+
+		let sliders = $('.props-slider').find('.swiper-container');
+		sliders.each(function(){
+
+			$(this)[0].swiper.autoplay.start();
+		});
+	}
+
 }
 
 const cardBonusDropdown = ($) => {
@@ -276,4 +427,66 @@ const accordionFAQ = () => {
 		$(this).toggleClass('_active');
 		$(this).siblings('.accordion__body').slideToggle(400);
 	});
+}
+
+const futuredSlider = () => {
+
+	let slider;
+
+	slider = new Swiper('.futured-games .swiper-container', {
+
+		spaceBetween : 20,
+		slidesPerView : 4,
+		speed : 1400,
+		loop : true,
+
+		autoplay : {
+
+			delay: 1200,
+			disableOnInteraction : false
+		},
+
+		pagination : {
+
+			el : '.futured-games__slider-bullets',
+			type : 'bullets',
+			clickable: true
+		},
+
+		navigation : {
+
+			nextEl: '.button-slider-nav--next',
+			prevEl: '.button-slider-nav--prev',
+		},
+	});
+};
+
+const reviewCollapse = ($) => {
+
+	let button = $('.js-review-cards').find('.button-primary');
+
+	let textMore = button.attr('data-collapse-moretext');
+	let textLess = button.attr('data-collapse-lesstext');
+
+	let collapsedBlock = $('.js-review-cards').find('.review-cards__collapsed');
+
+	function collapsedBlockToggle(){
+
+		collapsedBlock.slideToggle(400);
+
+		if(!button.hasClass('_active')){
+
+			button.find('span').html(textMore);
+			button.addClass('_active');
+		} else {
+
+			button.find('span').html(textLess);
+			button.removeClass('_active');
+		}
+	}
+
+	collapsedBlockToggle();
+
+	button.on('click', collapsedBlockToggle);
+
 }

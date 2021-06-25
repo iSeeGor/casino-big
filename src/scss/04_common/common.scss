@@ -2,20 +2,62 @@
 	#COMMON
 ==============================================================================*/
 
+.site {
 
-// .site {
-// 	position: relative;
-// 	// max-width: 1920px;
-// 	margin: 0 auto;
-// 	// overflow: hidden;
-// }
+	padding-top: 112px;
+	overflow: hidden;
+    position: relative;
 
+	@media (max-width: 1380px){
+		
+		padding-top: 96px;
+	}
 
-.site, .container {
+	@media (max-width: 1200px){
+		
+		padding-top: 70px;
+	}
+}
+
+.site__body, .container {
 
 	max-width: 1452px;
 	padding: 0 16px;
 	margin: 0 auto;
+
+	@media (max-width: 1200px){
+		
+		max-width: 960px;
+	}
+}
+
+.site-overlay {
+
+	background: rgba(7, 3, 38, .7);
+	backdrop-filter: blur(4px);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 101;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@supports (backdrop-filter: blur()) {
+
+	.site-overlay {
+
+		background: rgba(7, 3, 38, .5);
+	}
+}
+
+.site-overlay.visible {
+
+	opacity: 1;
+	visibility: visible;
 }
 
 .page-content {
@@ -36,6 +78,33 @@
 		flex: 0 0 calc(34.5% - 50px);
 		max-width: calc(34.5% - 50px);
 		margin-left: 50px;
+	}
+
+	@media (max-width: 1480px){
+
+		&__main {
+
+			flex: 0 0 67.5%;
+			max-width: 67.5%;
+		}
+
+		&__aside {
+
+			flex: 0 0 calc(32.5% - 32px);
+			max-width: calc(32.5% - 32px);
+			margin-left: 32px;
+		}
+	}
+
+	@media (max-width: 1200px){
+
+		&__main,
+		&__aside {
+
+			flex: 0 0 100%;
+			max-width: 100%;
+			margin: 0;
+		}
 	}
 }
 

@@ -9,12 +9,14 @@
 
       &::before {
         transition: top 0.075s 0.12s ease,
-                    opacity 0.075s ease;
+                    opacity 0.075s ease,
+                    width .2s ease;
       }
 
       &::after {
         transition: bottom 0.075s 0.12s ease,
-                    transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+                    transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19),
+                    width .2s ease;
       }
     }
 

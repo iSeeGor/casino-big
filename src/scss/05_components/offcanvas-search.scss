@@ -1,0 +1,79 @@
+/*============================================================================
+	#Offcanvas Search
+==============================================================================*/
+.offcanvas-search {
+
+	width: 100%;
+	background: $colorBody;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 102;
+	border-bottom: 1px solid #2C3057;
+	transform: translateY(-100%);
+	transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+	
+
+	.container {
+
+		height: 80px;
+	}
+
+	&__inner {
+
+		display: flex;
+		align-items: center;
+		height: 100%;
+	}
+}
+
+.offcanvas-search.visible {
+
+	transform: translateY(0);
+}
+
+.offcanvas-search-form {
+
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+
+	&__input {
+
+		flex: 1 1 auto;
+		// max-width: 100%;
+		margin-right: 16px;
+		background: #2C3057;
+		border: none;
+		font-size: 18px;
+		font-weight: 300;
+		padding: 14px 20px 12px;
+		border-radius: 6px;
+
+		&:focus {
+
+			box-shadow: 0 0 0 1px $colorSky;
+		}
+
+		&::placeholder {
+
+			color: white;
+			transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+		}
+
+		&:focus::placeholder {
+
+			opacity: .4;
+		}
+	}
+
+	&__submit {
+
+		box-shadow: none;
+
+		.icon {
+
+			fill: white;
+		}
+	}
+} 
