@@ -35,7 +35,7 @@ jQuery(document).ready(function($){
 
 });
 
-// #START Helper Functions
+// #START Helper
 
 const bodyOverflow = ($) => {
 
@@ -91,6 +91,13 @@ const siteOverlayHiddingElements = ($) => {
 		$(this).removeClass('visible');
 		$('.offcanvas-search').removeClass('visible');
 		$('.header').removeClass('is-active');
+		$('.card-bonus__more-close').parents('.card-bonus__more-block').removeClass('active');
+		
+		setTimeout(() => {
+			$('.casino-grid__col').css('z-index', '');
+		}, 400);
+		
+
 	});
 }
 // #END Helper Functions
@@ -273,6 +280,8 @@ const cardSliders = ($) => {
 				loop: true,
 				speed : 1000,
 				spaceBetween : 6,
+				observer: true,
+				observeParents	: true,
 
 				// autoplay: {
 
@@ -311,6 +320,8 @@ const cardSliders = ($) => {
 				loop: true,
 				speed : 1000,
 				spaceBetween : 0,
+				observer: true,
+				observeParents	: true,
 
 				// autoplay: {
 
@@ -349,6 +360,8 @@ const cardSliders = ($) => {
 				loop: true,
 				speed : 1000,
 				spaceBetween : 0,
+				observer: true,
+				observeParents	: true,
 
 				// autoplay: {
 
@@ -410,17 +423,42 @@ const cardBonusDropdown = ($) => {
 
 	});
 
-	$('.js-card-more-block').on('mouseenter', function(){
+	$('.js-card-more-block').hover(function(){
 
 		$(this).addClass('active');
 		$(this).prev().addClass('active');
-	});
 
-	$('.js-card-more-block').on('mouseleave', function(){
+	} , function(){
 
 		$(this).removeClass('active');
-		$(this).prev().removeClass('active');
+		$(this).prev().removeClass('active');	
 	});
+
+	// Toggle Add Hover to Block 767px 
+	const mediaQuery = window.matchMedia('(min-width: 767px)');
+
+	function handlerBreakpoint(e) {
+
+		if(e.matches) {
+
+			$('.js-card-more-block').hover(function(){
+
+				$(this).addClass('active');
+				$(this).prev().addClass('active');
+
+			} , function(){
+
+				$(this).removeClass('active');
+				$(this).prev().removeClass('active');	
+			});
+		} else {
+
+			$('.js-card-more-block').unbind('mouseenter').unbind('mouseleave')
+		}
+	};
+
+	mediaQuery.addListener(handlerBreakpoint);
+	handlerBreakpoint(mediaQuery);
 }
 
 const accordionFAQ = () => {
@@ -472,15 +510,49 @@ const cardCasino = ($) => {
 		$(this).parents('.card').find('.card__col--main').slideToggle(400);
 	});
 
-	// Move Bonus To New Column
-	if(window.innerWidth <= 767){
+	// Move Bonus To New Column and Return it in resize
+	const mediaQuery = window.matchMedia('(max-width: 767px)');
 
+	function handlerBreakpoint(e) {
+
+		if(e.matches) {
+
+			$('.card').each(function(){
+
+				$(this).find('.card__col--right').prepend($(this).find('.card-bonus'));
+			});
+
+			$('.card-bonus__title').on('click', function(){
+
+				siteOverlayToggle($);
+				$(this).parents('.card-bonus').find('.card-bonus__more-block').toggleClass('active');
+				$(this).parents('.casino-grid__col').css('z-index', '102');
+			});
+		} else {
+
+			$('.card').each(function(){
+
+				$(this).find('.card__col--main').append($(this).find('.card-bonus'));
+			});
+
+			$('.card-bonus').off('click');
+		}
+	};
+
+	mediaQuery.addListener(handlerBreakpoint);
+	handlerBreakpoint(mediaQuery);
+
+	$('.card-bonus__more-close').on('click', function(){
+
+		siteOverlayToggle($);
+		$(this).parents('.card-bonus__more-block').removeClass('active');
+
+		setTimeout(() => {
+			$(this).parents('.casino-grid__col').css('z-index', '');	
+		}, 400);
 		
-		$('.card').each(function(){
-
-			$(this).find('.card__col--right').prepend($(this).find('.card-bonus'));
-		});
-	}
+	});
+	
 }
 
 const reviewCollapse = ($) => {

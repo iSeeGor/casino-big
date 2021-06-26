@@ -405,3 +405,35 @@
 		}
 	}
 }
+
+.button-close {
+	
+	position: relative;
+	padding: 20px;
+	z-index: 2;
+	display: block;
+
+	&::before,
+	&::after {
+
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		height: 2px;
+		width: 26px;
+		background: black;
+		opacity: .5;
+		transform: translate(-50%, -50%);
+	}
+
+	&::before {
+
+		transform: translate(-50%, -50%) rotate(45deg);
+	} 
+
+	&::after {
+
+		transform: translate(-50%, -50%) rotate(-45deg);
+	} 
+}
