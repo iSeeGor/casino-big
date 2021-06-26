@@ -17,6 +17,7 @@ jQuery(document).ready(function($){
 	accordionFAQ();
 	futuredSlider();
 	cardCasino($);
+	homeBonusSlider();
 
 	// Reviews
 	reviewCollapse($);
@@ -552,6 +553,56 @@ const cardCasino = ($) => {
 		}, 400);
 		
 	});
+	
+};
+
+const homeBonusSlider = () => {
+
+	let slider;
+
+	function swiperInit(){
+
+		slider = new Swiper('.js-home-bonus-slider', {
+
+			wrapperClass : 'main-grid',
+			slideClass : 'main-grid__col', 
+			loop: true,
+			slidesPerView : 'auto',
+			spaceBetween : 14,
+			speed : 1400,
+
+			autoplay: {
+				delay: 1400,
+				disableOnInteraction : false,
+				pauseOnMouseEnter : true
+			},
+
+			breakpoints : {
+
+				480 : {
+
+					spaceBetween : 20,
+				}
+			}
+		});	
+	}
+
+	const mediaQuery = window.matchMedia('(max-width: 767px)');
+
+	function handlerBreakpoint(e) {
+
+		if(e.matches) {
+
+			swiperInit();
+		} else {
+
+			slider.destroy( true, true );
+		}
+	};
+
+	mediaQuery.addListener(handlerBreakpoint);
+	handlerBreakpoint(mediaQuery);
+
 	
 }
 

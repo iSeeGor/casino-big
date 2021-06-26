@@ -145,6 +145,21 @@
 	&__title {
 
 		margin: 0 0 0 0;
+
+		@media (max-width: 1200px){
+			
+			font-size: 32px;
+		}
+
+		@media (max-width: 767px){
+			
+			font-size: 28px;
+		}
+
+		@media (max-width: 480px){
+			
+			font-size: 24px;
+		}
 	}
 }
 
@@ -165,6 +180,18 @@
 
 		flex: 0 0 calc(100% / 1 - 36px );
 		max-width: calc(100% / 1 - 36px );
+	}
+
+	@media (max-width: 1480px){
+		
+		margin: -10px;
+
+		&__col {
+
+			flex: 0 0 calc(100% / 3 - 20px );
+			max-width: calc(100% / 3 - 20px );
+			margin: 10px 10px;
+		}
 	}
 }
 
