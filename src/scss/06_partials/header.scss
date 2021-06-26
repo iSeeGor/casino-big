@@ -109,11 +109,14 @@
 	visibility: hidden;
 	margin-left: auto;
 	z-index: 100;
+	border-bottom: 1px solid transparent;
 
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
+
+	transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
 
 	.container {
 

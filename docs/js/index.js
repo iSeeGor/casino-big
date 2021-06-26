@@ -16,6 +16,7 @@ jQuery(document).ready(function($){
 	cardBonusDropdown($);
 	accordionFAQ();
 	futuredSlider();
+	cardCasino($);
 
 	// Reviews
 	reviewCollapse($);
@@ -89,6 +90,7 @@ const siteOverlayHiddingElements = ($) => {
 
 		$(this).removeClass('visible');
 		$('.offcanvas-search').removeClass('visible');
+		$('.header').removeClass('is-active');
 	});
 }
 // #END Helper Functions
@@ -232,6 +234,7 @@ const bannerSlider = ($) => {
 		// grabCursor: true,
 		parallax: true,
 		speed: 800,
+		autoHeight: true,
 
 		pagination: {
 			el: '.swiper-pagination',
@@ -460,6 +463,25 @@ const futuredSlider = () => {
 		},
 	});
 };
+
+const cardCasino = ($) => {
+
+	$('.card__main-toggle').on('click', function(){
+
+		$(this).toggleClass('is-active');
+		$(this).parents('.card').find('.card__col--main').slideToggle(400);
+	});
+
+	// Move Bonus To New Column
+	if(window.innerWidth <= 767){
+
+		
+		$('.card').each(function(){
+
+			$(this).find('.card__col--right').prepend($(this).find('.card-bonus'));
+		});
+	}
+}
 
 const reviewCollapse = ($) => {
 

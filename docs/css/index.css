@@ -1323,6 +1323,9 @@ p {
   @media (max-width: 1200px) {
     .site__body, .container {
       max-width: 960px; } }
+  @media (max-width: 375px) {
+    .site__body, .container {
+      padding: 0 10px; } }
 
 .site-overlay {
   background: rgba(7, 3, 38, 0.7);
@@ -2169,13 +2172,28 @@ img.wp-smiley, img.emoji {
 
 @media (max-width: 480px) {
   .banner-slider__slide {
-    padding: 56px 32px; }
+    padding: 40px 32px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .banner-slider__content {
+    margin-bottom: 16px; }
   .banner-slider__title {
     font-size: 24px;
     margin-bottom: 12px; }
   .banner-slider__sub-title {
     font-size: 18px;
-    margin-bottom: 18px; } }
+    margin-bottom: 18px; }
+  .banner-slider__text {
+    font-size: 14px;
+    max-width: 250px; } }
+
+@media (max-width: 374px) {
+  .banner-slider__slide {
+    padding: 32px 24px; } }
 
 /*============================================================================
 	#Cards Section
@@ -2197,6 +2215,17 @@ img.wp-smiley, img.emoji {
   .section-cards__title {
     margin: 0 0 8px 0;
     font-size: 38px; }
+    @media (max-width: 1480px) {
+      .section-cards__title {
+        font-size: 36px; } }
+    @media (max-width: 1200px) {
+      .section-cards__title {
+        font-size: 32px;
+        margin: 0; } }
+    @media (max-width: 767px) {
+      .section-cards__title {
+        font-size: 28px;
+        margin: 0; } }
   .section-cards__description {
     margin: 8px 0 16px 0; }
   .section-cards__tags {
@@ -2215,10 +2244,22 @@ img.wp-smiley, img.emoji {
 
 .section-cards--home {
   margin-bottom: 72px; }
+  @media (max-width: 1200px) {
+    .section-cards--home {
+      margin-bottom: 48px; } }
   .section-cards--home .section-cards__header {
     margin-bottom: 48px; }
+    @media (max-width: 1200px) {
+      .section-cards--home .section-cards__header {
+        margin-bottom: 32px; } }
+    @media (max-width: 767px) {
+      .section-cards--home .section-cards__header {
+        margin-bottom: 24px; } }
   .section-cards--home .section-cards__footer {
     margin-top: 48px; }
+    @media (max-width: 1200px) {
+      .section-cards--home .section-cards__footer {
+        margin-top: 40px; } }
 
 .section-cards--blog .section-cards__header {
   margin-bottom: 16px; }
@@ -2348,7 +2389,7 @@ img.wp-smiley, img.emoji {
     -webkit-box-flex: 1;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
-    padding: 0 8px; }
+    padding: 0 12px; }
     .card__col--right .button-primary {
       margin: 10px 0;
       min-width: auto;
@@ -2356,18 +2397,44 @@ img.wp-smiley, img.emoji {
       width: 100%;
       padding-left: 16px;
       padding-right: 16px; }
+  .card__main-toggle {
+    display: none;
+    visibility: hidden;
+    font-size: 14px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 4px 8px;
+    color: rgba(255, 255, 255, 0.7); }
+    .card__main-toggle .icon {
+      width: 10px;
+      height: 10px;
+      fill: #3246FF;
+      margin-left: 10px;
+      -webkit-transform: translateY(-1px) rotate(-90deg);
+      -ms-transform: translateY(-1px) rotate(-90deg);
+      transform: translateY(-1px) rotate(-90deg); }
+    .card__main-toggle.is-active .icon {
+      -webkit-transform: translateY(-1px) rotate(90deg);
+      -ms-transform: translateY(-1px) rotate(90deg);
+      transform: translateY(-1px) rotate(90deg); }
   .card__image {
-    margin-bottom: 14px; }
+    margin-bottom: 14px;
+    width: 160px; }
   .card__title {
     font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 18px; }
+    margin-bottom: 18px;
+    text-align: center; }
   .card__progress-bar {
     margin-bottom: 20px;
     -webkit-box-flex: 0;
     -ms-flex: 0 0 100%;
     flex: 0 0 100%; }
-  .card__amount {
+  .card__amount, .card__currency {
     margin-bottom: 20px; }
   .card__games {
     max-width: 320px;
@@ -2645,6 +2712,153 @@ img.wp-smiley, img.emoji {
     height: 10px;
     background: url("../icons/arrow-next--blue.svg") no-repeat;
     background-size: contain; }
+
+@media (max-width: 1380px) {
+  .card__col--main {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    max-width: inherit; }
+  .card__col--right {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 206px;
+    flex: 0 0 206px;
+    max-width: 206px; } }
+
+@media (min-width: 1200px) and (max-width: 1380px) {
+  .card__col--main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .card__progress-bar {
+    width: 100%;
+    margin-bottom: 14px; }
+  .card__amount, .card__games, .card__currency {
+    margin-bottom: 14px; } }
+
+@media (max-width: 940px) {
+  .card__col--main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .card__progress-bar {
+    width: 100%;
+    margin-bottom: 14px; }
+  .card__amount, .card__games, .card__currency {
+    margin-bottom: 14px; } }
+
+@media (max-width: 880px) {
+  .card__col--main {
+    padding: 9px 16px 14px; }
+  .card__col--right {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 190px;
+    flex: 0 0 190px;
+    max-width: 190px; }
+    .card__col--right .button-primary {
+      font-size: 14px;
+      max-width: 166px; } }
+
+@media (max-width: 767px) {
+  .card__inner {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 16px 24px; }
+  .card__col--left {
+    padding: 0;
+    padding-right: 24px;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 50%;
+    flex: 1 1 50%;
+    max-width: inherit; }
+  .card__col--right {
+    padding: 0;
+    padding-left: 24px;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 50%;
+    flex: 1 1 50%;
+    max-width: inherit; }
+  .card__col--main {
+    margin-top: 16px;
+    -webkit-box-ordinal-group: 1000;
+    -ms-flex-order: 999;
+    order: 999;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0;
+    padding-top: 16px;
+    display: none;
+    border: none;
+    border-top: 2px solid #2C3057; }
+  .card__main-toggle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    visibility: visible; }
+  .card__games {
+    margin-bottom: 8px; }
+  .card-bonus__title div {
+    display: none; }
+  .card-bonus__title span {
+    margin-left: 0; }
+  .card-bonus__show-more {
+    display: none; } }
+
+@media (max-width: 480px) {
+  .card__image {
+    width: 130px; }
+  .card__title {
+    word-break: break-all; }
+  .card__col--left {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1;
+    flex: 0 1; } }
+
+@media (max-width: 430px) {
+  .card__inner {
+    padding: 16px 21px; }
+  .card__col--left {
+    margin-left: -12px;
+    padding-right: 12px; }
+  .card__col--right {
+    padding-left: 20px; }
+  .card__image {
+    width: 112px; } }
+
+@media (max-width: 380px) {
+  .card__image {
+    margin-bottom: 8px; }
+  .card__title {
+    font-size: 14px;
+    margin-bottom: 12px; }
+  .card__col--main {
+    padding-top: 10px;
+    margin-top: 14px; }
+  .card__col--right {
+    padding-left: 10px;
+    margin-right: -10px; }
+    .card__col--right .button-primary {
+      margin: 6px 0;
+      padding-left: 4px;
+      padding-right: 4px; }
+  .card__bonus {
+    margin-bottom: 2px; }
+  .card__progress-bar, .card__amount, .card__games, .card__currency {
+    margin-bottom: 10px; }
+  .card-bonus__title {
+    font-size: 14px;
+    line-height: 24px;
+    margin-right: 0; }
+  .progress-bar__title, .progress-bar__number {
+    font-size: 12px; }
+  .props-slider__title {
+    font-size: 12px; }
+  .slider-items__item {
+    font-size: 12px; } }
 
 /*============================================================================
 	#Card Game
@@ -3008,7 +3222,8 @@ img.wp-smiley, img.emoji {
   margin-bottom: 6px;
   font-weight: 300;
   color: white;
-  opacity: .7; }
+  opacity: .7;
+  text-align: center; }
 
 .rating__body {
   display: -webkit-box;
@@ -4027,10 +4242,14 @@ img.wp-smiley, img.emoji {
   visibility: hidden;
   margin-left: auto;
   z-index: 100;
+  border-bottom: 1px solid transparent;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%; }
+  width: 100%;
+  -webkit-transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1); }
   .header-mobile .container {
     width: 100%;
     display: -webkit-box;
