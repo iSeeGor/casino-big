@@ -6,15 +6,54 @@
 	border-radius: 5px;
 	background: #161039;
 	padding: 32px 32px 48px;
-	// order: 999;
 
 	&__header {
 
 		margin-bottom: 24px;
+
+		@media (max-width: 380px){
+			
+			margin-bottom: 16px;
+		}
 	}
 
 	&__title {
 
 		margin: 0;
+
+		@media (max-width: 1200px){
+			
+			font-size: 32px;
+			line-height: 1.2;
+		}
+
+		@media (max-width: 767px){
+			
+			font-size: 28px;
+		}
+
+		@media (max-width: 480px){
+			
+			font-size: 24px;
+		}
+	}
+}
+
+@media (max-width: 767px){
+	
+	.section-faq {
+
+		margin-left: -16px;
+		margin-right: -16px;
+
+		padding: 32px 16px 32px;
+	}
+}
+
+@media (max-width: 380px) {
+
+	.section-faq {
+
+		padding: 28px 16px 32px;
 	}
 }

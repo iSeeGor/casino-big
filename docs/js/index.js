@@ -89,6 +89,8 @@ const siteOverlayHiddingElements = ($) => {
 	// Close all elements by clicking on overlay element
 	$overlay.on('click', function(){
 
+		bodyOverflow($);
+		
 		$(this).removeClass('visible');
 		$('.offcanvas-search').removeClass('visible');
 		$('.header').removeClass('is-active');

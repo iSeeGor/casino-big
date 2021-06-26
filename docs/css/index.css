@@ -559,17 +559,19 @@ p {
       font-family: "Muller", sans-serif;
       font-weight: 600; }
 
-.typography ul li::before {
-  content: '';
-  display: inline-block;
-  margin-right: 14px;
-  height: 8px;
-  width: 8px;
-  border-radius: 100%;
-  background: #070326;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px); }
+.typography ul li {
+  padding-left: 16px;
+  position: relative; }
+  .typography ul li::before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    height: 5px;
+    width: 5px;
+    left: 0;
+    top: 8px;
+    border-radius: 100%;
+    background: white; }
 
 .typography ol {
   counter-reset: section; }
@@ -578,18 +580,59 @@ p {
     content: counter(section) ". ";
     font-weight: 700; }
 
+.typography .responsive-table {
+  margin: 24px 0; }
+
+.typography table {
+  width: 100%;
+  border-collapse: collapse;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  font-size: 16px;
+  line-height: 140%; }
+  .typography table::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    width: 0;
+    height: 100%;
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 4px;
+    pointer-events: none; }
+  .typography table thead {
+    border-bottom: 1px solid white; }
+    .typography table thead tr:hover {
+      background: rgba(101, 42, 130, 0.4); }
+  .typography table th {
+    text-align: left; }
+  .typography table tr {
+    border-bottom: 1px solid white;
+    -webkit-transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -o-transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1); }
+    .typography table tr:last-child {
+      border-bottom: 0; }
+    .typography table tr:hover {
+      background: rgba(44, 34, 98, 0.5); }
+  .typography table td, .typography table th {
+    padding: 12px 12px;
+    text-align: center;
+    border-right: 1px solid white; }
+
 .typography blockquote {
   position: relative;
   z-index: 1;
-  background: #070326;
+  background: #2C3057;
   margin: 40px 0 40px;
   padding: 40px 68px;
-  border-radius: 16px;
+  border-radius: 6px;
   text-align: center; }
   .typography blockquote p {
     position: relative; }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .typography h1,
   .typography h2,
   .typography h3,
@@ -599,13 +642,13 @@ p {
   .typography h6 {
     margin: 24px 0 16px; }
   .typography h1 {
-    font-size: 38px;
+    font-size: 34px;
     line-height: 1.23; }
   .typography h2 {
     font-size: 32px;
-    line-height: 1.3; }
+    line-height: 1.23; }
   .typography blockquote {
-    margin: 40px 0 40px;
+    margin: 32px 0 32px;
     padding: 20px 38px; }
     .typography blockquote p {
       font-size: 17px; }
@@ -622,12 +665,34 @@ p {
     margin-left: auto;
     margin-right: auto; } }
 
-@media (max-width: 767.98px) {
+@media (max-width: 880px) {
+  .typography .responsive-table {
+    width: 100%;
+    overflow-x: auto; }
+    .typography .responsive-table::-webkit-scrollbar {
+      height: 4px;
+      background: #2C3057;
+      border-radius: 10px; }
+    .typography .responsive-table::-webkit-scrollbar-thumb {
+      background: #3246FF;
+      border-radius: 10px; }
+    .typography .responsive-table table {
+      min-width: 570px;
+      margin-bottom: 8px;
+      line-height: 120%; }
+    .typography .responsive-table table td,
+    .typography .responsive-table table th {
+      padding: 10px 12px; } }
+
+@media (max-width: 767px) {
   .typography h1 {
     font-size: 32px;
     line-height: 1.23; }
   .typography h2 {
     font-size: 28px;
+    line-height: 1.2; }
+  .typography h3 {
+    font-size: 26px;
     line-height: 1.3; }
   .typography blockquote {
     padding: 10px 16px; }
@@ -645,6 +710,26 @@ p {
     display: block;
     margin-left: auto;
     margin-right: auto; } }
+
+@media (max-width: 480px) {
+  .typography h1 {
+    font-size: 26px;
+    line-height: 1.2; }
+  .typography h2 {
+    font-size: 24px;
+    line-height: 1.2; }
+  .typography h3 {
+    font-size: 22px;
+    line-height: 1.25; }
+  .typography h4 {
+    font-size: 20px;
+    line-height: 1.3; }
+  .typography h5 {
+    font-size: 18px;
+    line-height: 1.3; }
+  .typography h6 {
+    font-size: 16px;
+    line-height: 1.3; } }
 
 /* ui/ux
 ===================================================*/
@@ -1441,7 +1526,8 @@ p {
     margin: 0 0 0 0; }
     @media (max-width: 1200px) {
       .section__title {
-        font-size: 32px; } }
+        font-size: 32px;
+        line-height: 1.2; } }
     @media (max-width: 767px) {
       .section__title {
         font-size: 28px; } }
@@ -2265,6 +2351,7 @@ img.wp-smiley, img.emoji {
     @media (max-width: 1200px) {
       .section-cards__title {
         font-size: 32px;
+        line-height: 1.2;
         margin: 0; } }
     @media (max-width: 767px) {
       .section-cards__title {
@@ -3547,6 +3634,9 @@ img.wp-smiley, img.emoji {
   -webkit-transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   -o-transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); }
+  @media (max-width: 480px) {
+    .accordion__title {
+      font-size: 16px; } }
 
 .accordion__button {
   display: block;
@@ -3576,26 +3666,16 @@ img.wp-smiley, img.emoji {
   font-size: 18px;
   line-height: 140%;
   font-weight: 300; }
+  @media (max-width: 980px) {
+    .accordion__message {
+      font-size: 16px; } }
+  @media (max-width: 980px) {
+    .accordion__message {
+      font-size: 14px; } }
   .accordion__message p {
     margin: 0 0 20px 0; }
   .accordion__message *:last-child {
     margin-bottom: 0; }
-
-@media (max-width: 395.98px) {
-  .accordion__header {
-    padding: 11px 50px 12px 20px; }
-  .accordion__title {
-    font-size: 15px;
-    line-height: 1.5; }
-  .accordion__button {
-    right: 18px;
-    height: 26px;
-    width: 26px; }
-    .accordion__button::before, .accordion__button::after {
-      width: 10px;
-      height: 1px; }
-  .accordion__body {
-    padding: 11px 20px 12px; } }
 
 /*============================================================================
 	#Page Tags
@@ -4545,8 +4625,14 @@ img.wp-smiley, img.emoji {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(8.54%, #070326), to(#3246FF));
   background: -o-linear-gradient(top, #070326 8.54%, #3246FF 100%);
   background: linear-gradient(180deg, #070326 8.54%, #3246FF 100%); }
+  @media (max-width: 1200px) {
+    .footer {
+      padding-top: 60px; } }
   .footer__widgets, .footer__banners, .footer__info {
     margin-bottom: 70px; }
+    @media (max-width: 1200px) {
+      .footer__widgets, .footer__banners, .footer__info {
+        margin-bottom: 30px; } }
 
 .footer-widgets {
   padding-bottom: 24px;
@@ -4579,6 +4665,10 @@ img.wp-smiley, img.emoji {
 .widget-footer__title {
   font-size: 24px;
   margin: 0 0 24px 0; }
+  @media (max-width: 1200px) {
+    .widget-footer__title {
+      font-size: 22px;
+      line-height: 1.2; } }
 
 .widget-nav__list {
   padding: 0;
@@ -4652,6 +4742,72 @@ img.wp-smiley, img.emoji {
   justify-content: center;
   padding: 4px 0; }
 
+@media (max-width: 1480px) {
+  .footer-widgets__row {
+    margin: 0 -16px; }
+  .footer-widgets__col {
+    margin: 0 16px; }
+  .footer-widgets__col-2 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 calc(100% / 6 - 32px);
+    flex: 0 0 calc(100% / 6 - 32px);
+    max-width: calc(100% / 6 - 32px); }
+  .footer-widgets__col-3 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 calc(100% / 4 - 32px);
+    flex: 0 0 calc(100% / 4 - 32px);
+    max-width: calc(100% / 4 - 32px); }
+  .footer-widgets__col-4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 calc(100% / 3 - 32px);
+    flex: 0 0 calc(100% / 3 - 32px);
+    max-width: calc(100% / 3 - 32px); } }
+
+@media (max-width: 1380px) {
+  .footer-widgets__col-2, .footer-widgets__col-3, .footer-widgets__col-4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 calc(100% / 4 - 32px);
+    flex: 0 0 calc(100% / 4 - 32px);
+    max-width: calc(100% / 4 - 32px); } }
+
+@media (max-width: 980px) {
+  .footer {
+    padding-top: 40px;
+    border-top-width: 1px; }
+    .footer__widgets {
+      padding-bottom: 0;
+      margin-bottom: 0; }
+  .footer-widgets__col {
+    padding-bottom: 40px; }
+  .footer-widgets__col-2, .footer-widgets__col-3, .footer-widgets__col-4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 calc(100% / 2 - 32px);
+    flex: 0 0 calc(100% / 2 - 32px);
+    max-width: calc(100% / 2 - 32px); } }
+
+@media (max-width: 580px) {
+  .footer-widgets__row {
+    margin: 0 -10px; }
+  .footer-widgets__col {
+    margin: 0 10px; }
+  .footer-widgets__col-2, .footer-widgets__col-3, .footer-widgets__col-4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 calc(100% / 2 - 20px);
+    flex: 0 0 calc(100% / 2 - 20px);
+    max-width: calc(100% / 2 - 20px); } }
+
+@media (max-width: 480px) {
+  .widget-footer__title {
+    font-size: 20px;
+    margin-bottom: 16px; }
+  .footer-widgets__col {
+    padding-bottom: 32px; }
+  .footer-widgets__col-2, .footer-widgets__col-3, .footer-widgets__col-4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 calc(100% / 1 - 20px);
+    flex: 0 0 calc(100% / 1 - 20px);
+    max-width: calc(100% / 1 - 20px); } }
+
 /*============================================================================
 	#Modals
 ==============================================================================*/
@@ -4667,8 +4823,31 @@ img.wp-smiley, img.emoji {
   padding: 32px 32px 48px; }
   .section-faq__header {
     margin-bottom: 24px; }
+    @media (max-width: 380px) {
+      .section-faq__header {
+        margin-bottom: 16px; } }
   .section-faq__title {
     margin: 0; }
+    @media (max-width: 1200px) {
+      .section-faq__title {
+        font-size: 32px;
+        line-height: 1.2; } }
+    @media (max-width: 767px) {
+      .section-faq__title {
+        font-size: 28px; } }
+    @media (max-width: 480px) {
+      .section-faq__title {
+        font-size: 24px; } }
+
+@media (max-width: 767px) {
+  .section-faq {
+    margin-left: -16px;
+    margin-right: -16px;
+    padding: 32px 16px 32px; } }
+
+@media (max-width: 380px) {
+  .section-faq {
+    padding: 28px 16px 32px; } }
 
 /*============================================================================
 	#Reviews
