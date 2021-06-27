@@ -13,7 +13,7 @@ jQuery(document).ready(function($){
 
 	// components
 	// bannerSlider($);
-	// cardSliders($);
+	cardSliders($);
 	// cardBonusDropdown($);
 	// accordionFAQ();
 	// futuredSlider();

@@ -12,7 +12,7 @@
 	left: 0;
 	width: 100%;
 	background: transparent;
-	transition: all 0.8s ease-in-out;
+	transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 
 	@media (max-width: 1380px){
 		
@@ -143,7 +143,7 @@
 		align-items: flex-start;
 		max-width: 375px;
 		transform: translateX(-100%);
-		opacity: 1;
+		will-change: transform;
 	
 		&__inner {
 
