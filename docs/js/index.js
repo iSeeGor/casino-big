@@ -19,10 +19,13 @@ jQuery(document).ready(function($){
 	futuredSlider();
 	cardCasino($);
 	homeBonusSlider();
+	
 
 	// Reviews
 	reviewCollapse($);
 	
+	// Footer
+	footerBannerSlider($);
 
 	// close outside 
 	document.addEventListener("click", function(event) {
@@ -250,9 +253,11 @@ const sectionTypography = ($) => {
 		let lesstext = $(this).attr('data-less-text');
 
 		if(collasBlock.hasClass('is-collapsed')) {
+			$("html, body").animate({ scrollTop: $('.typography-collapsed').offset().top - 200 }, 0);
 			collasBlock.css('height', '').removeClass('is-collapsed');
 			$(this).find('span').html(moretext);
 			$(this).removeClass('active');
+			
 		} else {
 			collasBlock.css('height', height + 'px').addClass('is-collapsed');
 			$(this).find('span').html(lesstext);
@@ -666,4 +671,54 @@ const reviewCollapse = ($) => {
 
 	button.on('click', collapsedBlockToggle);
 
+}
+
+const footerBannerSlider = ($) => {
+
+	let swiper;
+
+	function swiperInit(){
+
+		swiper = new Swiper('.footer-banners__content', {
+
+			wrapperClass : 'footer-banners__item-list',
+			slideClass : 'footer-banners__item',
+			loop : true,
+			slidesPerView : 'auto',
+			spaceBetween : 16,
+
+			autoplay : {
+
+				delay : 1400,
+				disableOnInteraction : false
+			},
+
+			breakpoints : {
+
+				480 : {
+
+					spaceBetween : 24,
+				}
+			}
+
+		});
+	}
+
+	const mediaQuery = window.matchMedia('(max-width: 980px)');
+
+	function handlerBreakpoint(e) {
+
+		if(e.matches) {
+
+			swiperInit();
+		} else {
+
+			if(swiper === undefined) return;
+
+			swiper.destroy( true, true );
+		}
+	};
+
+	mediaQuery.addListener(handlerBreakpoint);
+	handlerBreakpoint(mediaQuery);
 }
