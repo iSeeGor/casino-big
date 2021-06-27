@@ -1961,9 +1961,11 @@ img.wp-smiley, img.emoji {
   -webkit-transform: translateY(20px);
   -ms-transform: translateY(20px);
   transform: translateY(20px);
-  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -o-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); }
+  -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: -webkit-transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1); }
   .megamenu__mobile {
     display: none;
     visibility: hidden; }
@@ -4452,9 +4454,9 @@ img.wp-smiley, img.emoji {
   left: 0;
   width: 100%;
   background: transparent;
-  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -o-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); }
+  -webkit-transition: padding 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), background 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: padding 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), background 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: padding 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), background 0.8s cubic-bezier(0.165, 0.84, 0.44, 1); }
   @media (max-width: 1380px) {
     .header {
       padding: 24px 0 32px; } }
@@ -4467,7 +4469,12 @@ img.wp-smiley, img.emoji {
       display: flex;
       -webkit-box-align: center;
       -ms-flex-align: center;
-      align-items: center; } }
+      align-items: center;
+      -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: -webkit-transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+      -o-transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1); } }
   .header__inner {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -5034,11 +5041,6 @@ img.wp-smiley, img.emoji {
 /*============================================================================
 	#Section typography
 ==============================================================================*/
-.typography-collapsed._visible {
-  -webkit-transition: height 1s linear;
-  -o-transition: height 1s linear;
-  transition: height 1s linear; }
-
 .typography-collapsed {
   height: 400px;
   overflow: hidden;
@@ -5053,9 +5055,16 @@ img.wp-smiley, img.emoji {
     left: 0;
     height: 100px;
     width: 100%;
+    opacity: 1;
+    -webkit-transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -o-transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, #070326), to(rgba(7, 3, 38, 0)));
     background: -o-linear-gradient(bottom, #070326 10%, rgba(7, 3, 38, 0) 100%);
     background: linear-gradient(0deg, #070326 10%, rgba(7, 3, 38, 0) 100%); }
+
+.typography-collapsed.is-collapsed::after {
+  opacity: 0; }
 
 .section-typography__footer {
   margin-top: 24px;
