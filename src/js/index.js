@@ -4,35 +4,36 @@ jQuery(document).ready(function($){
 	mobileMenu($);
 
 	//common
-	siteOverlayHiddingElements($);
-	fixedHeader($);
-	languageSwitcher($);
-	backgroundGradientsHandler($);
-	offcanvasSearchBar($);
+	// siteOverlayHiddingElements($);
+	// fixedHeader($);
+	// languageSwitcher($);
+	// backgroundGradientsHandler($);
+	// offcanvasSearchBar($);
+	// sectionTypography($);
 
 	// components
-	bannerSlider($);
-	cardSliders($);
-	cardBonusDropdown($);
-	accordionFAQ();
-	futuredSlider();
-	cardCasino($);
-	homeBonusSlider();
+	// bannerSlider($);
+	// cardSliders($);
+	// cardBonusDropdown($);
+	// accordionFAQ();
+	// futuredSlider();
+	// cardCasino($);
+	// homeBonusSlider();
 
 	// Reviews
-	reviewCollapse($);
+	// reviewCollapse($);
 	
 
 	// close outside 
-	document.addEventListener("click", function(event) {
-		if (event.target.closest(".js-lang-switch")) return;
-		// if (event.target.closest(".js-card-bonus")) return;
-		// if (event.target.closest(".card-bonus__more-block")) return;
+	// document.addEventListener("click", function(event) {
+	// 	if (event.target.closest(".js-lang-switch")) return;
+	// 	// if (event.target.closest(".js-card-bonus")) return;
+	// 	// if (event.target.closest(".card-bonus__more-block")) return;
 
-		$('.js-lang-switch').removeClass('active').find('.language__dropdown').slideUp(200);
-		// $('.card-bonus__more-block').removeClass('active');
-		// $('.js-card-bonus').removeClass('active');
-	});
+	// 	$('.js-lang-switch').removeClass('active').find('.language__dropdown').slideUp(200);
+	// 	// $('.card-bonus__more-block').removeClass('active');
+	// 	// $('.js-card-bonus').removeClass('active');
+	// });
 
 });
 
@@ -89,7 +90,7 @@ const siteOverlayHiddingElements = ($) => {
 	// Close all elements by clicking on overlay element
 	$overlay.on('click', function(){
 
-		bodyOverflow($);
+		// bodyOverflow($);
 		
 		$(this).removeClass('visible');
 		$('.offcanvas-search').removeClass('visible');
@@ -110,7 +111,7 @@ const mobileMenu = ($) => {
 	// Hamburger
 	$('.hamburger').on('click', function(){
 
-		bodyOverflow($);
+		// bodyOverflow($);
 		siteOverlayToggle($);
 
 		$(this).toggleClass('active');
@@ -124,7 +125,7 @@ const mobileMenu = ($) => {
 	// Close Menu
 	$('.header__close-button').on('click', function(){
 
-		bodyOverflow($);
+		// bodyOverflow($);
 		siteOverlayToggle($);
 
 		$('.header').removeClass('is-active');	
@@ -231,6 +232,31 @@ const offcanvasSearchBar = ($) => {
 		siteOverlayToggle($);
 		$('.offcanvas-search').addClass('visible');
 		$('.offcanvas-search').find('input').focus();
+	});
+}
+
+const sectionTypography = ($) => {
+
+	const $button = $('.section-typography__more-less');
+
+	
+	$button.on('click', function(e){
+
+		e.preventDefault();
+
+		let collasBlock = $(this).parents('.section-typography').find('.typography-collapsed');
+		let height = $(this).parents('.section-typography').find('.typography').outerHeight();
+		let moretext = $(this).attr('data-more-text');
+		let lesstext = $(this).attr('data-less-text');
+
+		if(collasBlock.hasClass('_visible')) {
+			collasBlock.css('height', '').removeClass('_visible');
+			$(this).html(moretext);
+		} else {
+			collasBlock.css('height', height + 'px').addClass('_visible');
+			$(this).html(lesstext);
+		}
+
 	});
 }
 
@@ -597,6 +623,8 @@ const homeBonusSlider = () => {
 
 			swiperInit();
 		} else {
+
+			if(slider === undefined) return;
 
 			slider.destroy( true, true );
 		}

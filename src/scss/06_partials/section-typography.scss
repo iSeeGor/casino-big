@@ -1,0 +1,47 @@
+/*============================================================================
+	#Section typography
+==============================================================================*/
+.typography-collapsed._visible {
+
+	transition: height 1s linear;
+}
+.typography-collapsed {
+
+	height: 400px;
+	overflow: hidden;
+	position: relative;
+	transition: height 1s linear;
+
+	&::after {
+
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		height: 100px;
+		width: 100%;
+
+		background: linear-gradient(0deg, rgba(7,3,38,1) 10%, rgba(7,3,38,0) 100%);
+	}
+}
+
+.section-typography {
+
+
+	&__footer {
+		margin-top: 24px;
+		display: flex;
+		justify-content: center;
+	}
+
+	&__more-less {
+
+		&.active {
+
+			.icon {
+
+				transform: rotate(-90deg);
+			}
+		}
+	}
+}

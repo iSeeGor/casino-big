@@ -4452,9 +4452,9 @@ img.wp-smiley, img.emoji {
   left: 0;
   width: 100%;
   background: transparent;
-  -webkit-transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -o-transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1); }
+  -webkit-transition: all 0.8s ease-in-out;
+  -o-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out; }
   @media (max-width: 1380px) {
     .header {
       padding: 24px 0 32px; } }
@@ -5030,6 +5030,46 @@ img.wp-smiley, img.emoji {
   margin-top: 24px;
   -webkit-box-shadow: none;
   box-shadow: none; }
+
+/*============================================================================
+	#Section typography
+==============================================================================*/
+.typography-collapsed._visible {
+  -webkit-transition: height 1s linear;
+  -o-transition: height 1s linear;
+  transition: height 1s linear; }
+
+.typography-collapsed {
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: height 1s linear;
+  -o-transition: height 1s linear;
+  transition: height 1s linear; }
+  .typography-collapsed::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, #070326), to(rgba(7, 3, 38, 0)));
+    background: -o-linear-gradient(bottom, #070326 10%, rgba(7, 3, 38, 0) 100%);
+    background: linear-gradient(0deg, #070326 10%, rgba(7, 3, 38, 0) 100%); }
+
+.section-typography__footer {
+  margin-top: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.section-typography__more-less.active .icon {
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg); }
 
 /* widgets
 ===================================================*/
