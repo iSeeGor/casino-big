@@ -17,7 +17,7 @@ jQuery(document).ready(function($){
 	// cardBonusDropdown($);
 	// accordionFAQ();
 	// futuredSlider();
-	// cardCasino($);
+	cardCasino($);
 	// homeBonusSlider();
 
 	// Reviews
