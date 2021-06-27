@@ -4,36 +4,36 @@ jQuery(document).ready(function($){
 	mobileMenu($);
 
 	//common
-	// siteOverlayHiddingElements($);
-	// fixedHeader($);
-	// languageSwitcher($);
-	// backgroundGradientsHandler($);
-	// offcanvasSearchBar($);
-	// sectionTypography($);
+	siteOverlayHiddingElements($);
+	fixedHeader($);
+	languageSwitcher($);
+	backgroundGradientsHandler($);
+	offcanvasSearchBar($);
+	sectionTypography($);
 
 	// components
-	// bannerSlider($);
+	bannerSlider($);
 	cardSliders($);
-	// cardBonusDropdown($);
-	// accordionFAQ();
-	// futuredSlider();
+	cardBonusDropdown($);
+	accordionFAQ();
+	futuredSlider();
 	cardCasino($);
-	// homeBonusSlider();
+	homeBonusSlider();
 
 	// Reviews
-	// reviewCollapse($);
+	reviewCollapse($);
 	
 
 	// close outside 
-	// document.addEventListener("click", function(event) {
-	// 	if (event.target.closest(".js-lang-switch")) return;
-	// 	// if (event.target.closest(".js-card-bonus")) return;
-	// 	// if (event.target.closest(".card-bonus__more-block")) return;
+	document.addEventListener("click", function(event) {
+		if (event.target.closest(".js-lang-switch")) return;
+		// if (event.target.closest(".js-card-bonus")) return;
+		// if (event.target.closest(".card-bonus__more-block")) return;
 
-	// 	$('.js-lang-switch').removeClass('active').find('.language__dropdown').slideUp(200);
-	// 	// $('.card-bonus__more-block').removeClass('active');
-	// 	// $('.js-card-bonus').removeClass('active');
-	// });
+		$('.js-lang-switch').removeClass('active').find('.language__dropdown').slideUp(200);
+		// $('.card-bonus__more-block').removeClass('active');
+		// $('.js-card-bonus').removeClass('active');
+	});
 
 });
 
@@ -249,12 +249,14 @@ const sectionTypography = ($) => {
 		let moretext = $(this).attr('data-more-text');
 		let lesstext = $(this).attr('data-less-text');
 
-		if(collasBlock.hasClass('_visible')) {
-			collasBlock.css('height', '').removeClass('_visible');
-			$(this).html(moretext);
+		if(collasBlock.hasClass('is-collapsed')) {
+			collasBlock.css('height', '').removeClass('is-collapsed');
+			$(this).find('span').html(moretext);
+			$(this).removeClass('active');
 		} else {
-			collasBlock.css('height', height + 'px').addClass('_visible');
-			$(this).html(lesstext);
+			collasBlock.css('height', height + 'px').addClass('is-collapsed');
+			$(this).find('span').html(lesstext);
+			$(this).addClass('active');
 		}
 
 	});

@@ -1,10 +1,7 @@
 /*============================================================================
 	#Section typography
 ==============================================================================*/
-.typography-collapsed._visible {
 
-	transition: height 1s linear;
-}
 .typography-collapsed {
 
 	height: 400px;
@@ -20,8 +17,17 @@
 		left: 0;
 		height: 100px;
 		width: 100%;
-
+		opacity: 1;
+		transition:opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 		background: linear-gradient(0deg, rgba(7,3,38,1) 10%, rgba(7,3,38,0) 100%);
+	}
+}
+
+.typography-collapsed.is-collapsed {
+
+	&::after {
+
+		opacity: 0;
 	}
 }
 
